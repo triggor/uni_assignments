@@ -1,0 +1,177 @@
+% start of the program
+go :-
+	write('Prosze wpisac liczbe \'n\': '),
+	read(N),
+	integer(N),N>1,
+	write('Prosze wpisac liste list: '),
+	read(ListaList),
+	M is N-1,
+	length(ListaList,M),
+	set_coord(ListaList,N,CoordList),
+	gen_pairs(CoordList,PairList),
+	factors(PairList,[],FactorList),
+	setof(CombList,get_comb(FactorList,N,[],CombList),CombSet),
+	select_solution(CombSet,PanelSet,Solution),
+	write('Rez = '), write(Solution).
+
+% sets coordinates to the elements on the input list
+set_coord(ListaList,N,Rez) :-
+	flat(ListaList,N,Flat,[]),
+	put_coord(Flat,N,Rez,[],1,1).
+
+% flattens the input list of lists
+flat([],_,X,X).
+flat([H|T],N,Rez,Acc) :-
+	length(H,N),
+	append(Acc,H,X),
+	flat(T,N,Rez,X).
+
+% appends coordinates to the elements and puts triplets into lists
+put_coord([],_,X,X,_,_).
+put_coord([H|T],N,Rez,Acc,X,Y) :-
+	integer(H),H>=0,
+	append(Acc,[[X,Y,H]],W),
+	next_coord(N,X,Y,NextX,NextY),
+	put_coord(T,N,Rez,W,NextX,NextY).
+
+% calculates what coordinates should be for the next element
+next_coord(N,X,Y,NextX,NextY) :-
+	Y < N,
+	!,
+	NextY is Y+1,
+	NextX=X.
+next_coord(_,X,_,NextX,NextY) :-
+	NextY=1,
+	NextX is X+1.
+
+% generates all possible sets of pairs for a given panel
+gen_pairs([],[]).
+gen_pairs([H|T],Rez) :-
+	append([Pair1],Acc,Rez),
+	select(X,T,S),
+	is_neighb(H,X),
+	nth1(3,H,ValH),
+	nth1(3,X,ValX),
+	atom_concat(ValH,ValX,AtomPair),
+	atom_number(AtomPair,Pair1),
+	gen_pairs(S,Acc).
+gen_pairs([H|T],Rez) :-
+	append([Pair2],Acc,Rez),
+	select(X,T,S),
+	is_neighb(H,X),
+	nth1(3,X,ValX),
+	nth1(3,H,ValH),
+	atom_concat(ValX,ValH,AtomPair),
+	atom_number(AtomPair,Pair2),
+	gen_pairs(S,Acc).
+
+% checks if two elements on a panel are neighbouring
+is_neighb([X,Y,_],[NeighbX,NeighbY,_]) :-
+	NeighbX is X, NeighbY is Y+1;
+	NeighbX is X+1, NeighbY is Y+1;
+	NeighbX is X+1, NeighbY is Y;
+	NeighbX is X+1, NeighbY is Y-1;
+	NeighbX is X, NeighbY is Y-1;
+	NeighbX is X-1, NeighbY is Y-1;
+	NeighbX is X-1, NeighbY is Y;
+	NeighbX is X-1, NeighbY is Y+1.
+
+% generates all possible factors for each element in a given list
+factors([],X,X).
+factors([H|T],Acc,Rez) :-
+	is_factor(H,1,FactList),
+	concat(FactList,Acc,NewAcc),
+	factors(T,NewAcc,Rez).
+
+% generates all factors for a given number
+is_factor(Num,Sqrt,[]) :-
+	Sqrt > sqrt(Num),
+	!.
+is_factor(Num,D,List) :-
+	add_factor(Num,D,List,Acc),
+	NewD is D+1,
+	is_factor(Num,NewD,Acc).
+
+% adds factors to a list
+add_factor(Num,D,List,Acc) :-
+	Num mod D =:= 0,
+	!,
+	R is Num div D,
+	List = [D,R|Acc].
+add_factor(_,_,List,Acc) :-
+	List = Acc.
+
+% concatenates unique elements into a new list
+concat([],X,X) :-
+	!.
+concat([H|T],Acc,Rez) :-
+	member(H,Acc),
+	!,
+	concat(T,Acc,Rez).
+concat([H|T],Acc,Rez) :-
+	concat(T,[H|Acc],Rez).
+
+% generates all possibles combinations of N elements from a factor list
+get_comb(FactorList,N,Acc,Rez) :-
+	N>0,
+	!,
+	NewAcc = [X|Acc],
+	NewN is N-1,
+	select(X,FactorList,_),
+	get_comb(FactorList,NewN,NewAcc,Rez).
+get_comb(_,_,X,Y) :-
+	findall(Pairs,get_pairs(X,2,[],Pairs),X1X2),
+	forall(member([X1,X2],X1X2),(X1*X2>9,X1*X2<100)),
+	msort(X,Y).
+
+% generates all possible pairs from factor list
+get_pairs(Elements,N,Acc,Rez) :-
+	N>0,
+	!,
+	NewAcc = [X|Acc],
+	NewN is N-1,
+	select(X,Elements,Rest),
+	get_pairs(Rest,NewN,NewAcc,Rez).
+get_pairs(_,_,X,X).
+
+% looks for a solution within lists of all N-element factor combinations
+select_solution([H|_],PanelSet,H) :-
+	is_solution(H,PanelSet).
+select_solution([_|T],PanelSet,Rez) :-
+	select_solution(T,PanelSet,Rez).
+
+% checks if a given N-element factor combination satisfies the set
+% of pairs on a panel
+is_solution(CombElem,PanelSet) :-
+	gen_set(CombElem,FactSet),
+	sets_equal(FactSet,PanelSet).
+
+% generates the set of production for given set of factors
+gen_set(FactSet,ProdSet) :-
+	get_uniq_pairs(FactSet,Pairs),
+	flat_set(Pairs,Flat,[]),
+	findall(Number,(member([X1,X2],Flat),Number is X1*X2),ProdSet).
+
+% generates set of sets of unique pairs on a given list
+get_uniq_pairs(List,Rez) :-
+	pairs_loop(List,Rez).
+
+% flattens the input list of lists one level down
+flat_set([],X,X).
+flat_set([H|T],Rez,Acc) :-
+	append(Acc,H,X),
+	flat_set(T,Rez,X).
+% controls the loop for pair generation
+pairs_loop([_],[]).
+pairs_loop([H|T],[X|Y]) :-
+	pairs_loop(T,Y),
+	findall(Pair,uniq_pairs([H|T],Pair),X).
+
+% selects one pair from a given list
+uniq_pairs([H|T],[H,X]) :-
+	select(X,T,_).
+
+% checks if given sets of elements are equal
+sets_equal(X,Y) :-
+	msort(X,Sorted),
+	msort(Y,Sorted).
