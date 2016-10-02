@@ -1,1 +1,21 @@
 
+Celem tego kursu jest nauczenie i rozwinięcie podstawowych umiejętności programowania w jednym z najbardziej rozpowszechnionych języków imperatywnych - języku C. Wykład jest ilustrowany wieloma przykładami, a towarzyszące mu zajęcia w pracowniach uczą (poprzez wiele drobnych zadań i końcowy projekt) praktyki dobrego programowania. Nie wymaga on od uczestników żadnych wcześniejszych umiejętności programowania, ale studenci startujący od zera będą musieli poświęcić mu więcej pracy w domu, aby szybko wyrównać poziom. Elementy języka są wprowadzane stopniowo, zaczynając od konstrukcji podstawowych, a kończąc na bardziej zaawansowanych zagadnieniach, jak wskaźniki i dynamiczne struktury danych, operacje na plikach czy funkcje rekurencyjne. Ostatnie wykłady poświęcone są obiektowym elementom języka C++.
+
+Pochód języków programowania trwa od zarania informatyki. Studium języków C i C++ ułatwia start w naturalną ich kontynuację, do której obecnie zaliczają się ważne z komercyjnego punktu widzenia języki i środowiska: Java (Sun) oraz C# (.NET Microsoft).
+
+Program:
+
+Podstawowe konstrukcje języka: instrukcje i deklaracje.
+Standardowe typy danych, wyrażenia.
+Standardowe wejście/wyjście, filtry.
+Funkcje, moduły i struktura programu.
+Metody agregacji danych: tablice, struktury i unie.
+Wskaźniki.
+Dynamiczne zarządzanie pamięcią, standardowe biblioteki C.
+Sekwencyjne i swobodne przetwarzanie plików.
+Klasy, obiekty i strumienie w C++.
+Literatura:
+
+Kernighan B.W., Ritchie D.M.: Język ANSI C. Seria "Klasyka Informatyki". Warszawa, Wydawnictwa Naukowo-Techniczne 2003. Podręcznik podstawowy.
+Schildt B., C: The Complete Reference: covers C++ and ANSI C, Osborne McGraw-Hill,
+ISO/IEC 9899 - Programming languages - C (aktualny standard ISO 1999).
