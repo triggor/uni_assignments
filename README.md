@@ -8,3 +8,9 @@ List of subjects:
 - Intro_to_Computer_Science
 - Intro_to_Programming_in_C
 - Logic_for_Comp_Scie
+
+# 2. semester:
+ - Algebra
+ - Calculus_2
+ - Linux_OS
+ - Programming_Methodology
