@@ -14,3 +14,11 @@ List of subjects:
  - Calculus_2
  - Linux_OS
  - Programming_Methodology
+
+# 3. semester:
+Basics_of_Electronics_Electrical_Engineering_and_Surveying
+Computer_Security_Culture
+Discrete_Mathematics
+Numerical_Analysis
+Probabilistics_in_Computer_Science
+Programming_in_Python
