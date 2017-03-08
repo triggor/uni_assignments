@@ -39,6 +39,6 @@ Here are uploaded my university assignments (mostly in Polish) along with my pro
 # [6. semester](https://github.com/triggor/uni_assignments/tree/master/6.semester):
  - [Application_Security](https://github.com/triggor/uni_assignments/tree/master/6.semester/Application_Security)
  - [Computer_Networks_and_Communications-CCNA](https://github.com/triggor/uni_assignments/tree/master/6.semester/Computer_Networks_and_Communications-CCNA)
- - [Data_Bases](https://github.com/triggor/uni_assignments/tree/master/6.semester/Data_Bases)
+ - [Databases](https://github.com/triggor/uni_assignments/tree/master/6.semester/Databases)
  - [Programming_in_.NET](https://github.com/triggor/uni_assignments/tree/master/6.semester/Programming_in_.NET)
  - [Statistics_and_Probability_Theory](https://github.com/triggor/uni_assignments/tree/master/6.semester/Statistics_and_Probability_Theory)
