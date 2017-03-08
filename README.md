@@ -16,9 +16,14 @@ List of subjects:
  - Programming_Methodology
 
 # 3. semester:
-Basics_of_Electronics_Electrical_Engineering_and_Surveying
-Computer_Security_Culture
-Discrete_Mathematics
-Numerical_Analysis
-Probabilistics_in_Computer_Science
-Programming_in_Python
+ - Basics_of_Electronics_Electrical_Engineering_and_Surveying
+ - Computer_Security_Culture
+ - Discrete_Mathematics
+ - Numerical_Analysis
+ - Probabilistics_in_Computer_Science
+ - Programming_in_Python
+
+# 4. semester:
+
+
+# 5. semester:
