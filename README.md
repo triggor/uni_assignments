@@ -24,6 +24,9 @@ List of subjects:
  - Programming_in_Python
 
 # 4. semester:
-
+ - Algorithms_and_Data_Structures
+ - Computer_Networks
+ - Computer_Systems_Architecture
+ - Programming_in_CPP
 
 # 5. semester:
