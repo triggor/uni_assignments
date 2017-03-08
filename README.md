@@ -3,7 +3,7 @@ Here are uploaded my university assignments (mostly in Polish) along with my pro
 
 List of subjects:
 
-1. semester:
+# 1. semester:
 - Calculus_1
 - Intro_to_Computer_Science
 - Intro_to_Programming_in_C
