@@ -1,7 +1,6 @@
 # uni_assignments
 Here are uploaded my university assignments (mostly in Polish) along with my programming solutions for some of them.
 
-List of subjects:
 
 # 1. semester:
 - Calculus_1
@@ -30,3 +29,9 @@ List of subjects:
  - Programming_in_CPP
 
 # 5. semester:
+ - Embedded_Systems
+ - Operating_Systems
+ - Programming_in_Java
+ - Search_Engine_Optimization
+ - Web_Development
+ - Workshop_for_Computer_Scientists
