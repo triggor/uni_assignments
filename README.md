@@ -2,7 +2,7 @@
 Here are uploaded my university assignments (mostly in Polish) along with my programming solutions for some of them.
 
 
-# 1. semester:
+# [1. semester](https://github.com/triggor/uni_assignments/tree/master/1.semester):
 - [Calculus_1](https://github.com/triggor/uni_assignments/tree/master/1.semester/Calculus_1)
 - [Intro_to_Computer_Science](https://github.com/triggor/uni_assignments/tree/master/1.semester/Intro_to_Computer_Science)
 - [Intro_to_Programming_in_C](https://github.com/triggor/uni_assignments/tree/master/1.semester/Intro_to_Programming_in_C)
