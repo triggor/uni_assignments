@@ -50,6 +50,7 @@ Here are uploaded my university assignments (mostly in Polish) along with my pro
  - [Software_Engineering](https://github.com/triggor/uni_assignments/tree/master/7.semester/Statistics_and_Probability_Theory)
  - [Selected_Areas_of_Practical_Software_Development](https://github.com/triggor/uni_assignments/tree/master/7.semester/Programming_in_.NET)
  - [Seminar_Security_and_Protection_of_Information](https://github.com/triggor/uni_assignments/tree/master/7.semester/Statistics_and_Probability_Theory)
+ - [German](https://github.com/triggor/uni_assignments/tree/master/7.semester/Statistics_and_Probability_Theory)
  
  # [8. semester](https://github.com/triggor/uni_assignments/tree/master/8.semester) (current):
  - [Evolutional_Algorithms](https://github.com/triggor/uni_assignments/tree/master/8.semester/Application_Security)
