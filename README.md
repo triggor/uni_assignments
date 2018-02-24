@@ -43,14 +43,14 @@ Here are uploaded my university assignments (mostly in Polish) along with my pro
  - [Statistics_and_Probability_Theory](https://github.com/triggor/uni_assignments/tree/master/6.semester/Statistics_and_Probability_Theory)
  
  # [7. semester](https://github.com/triggor/uni_assignments/tree/master/7.semester):
- - [Data_Mining](https://github.com/triggor/uni_assignments/tree/master/7.semester/Application_Security)
- - [Economics_of_European_integration](https://github.com/triggor/uni_assignments/tree/master/7.semester/Computer_Networks_and_Communications-CCNA)
- - [Human_Computer_Interaction](https://github.com/triggor/uni_assignments/tree/master/7.semester/Databases)
- - [Neural_Networks_and_Deep_Learning](https://github.com/triggor/uni_assignments/tree/master/7.semester/Programming_in_.NET)
- - [Software_Engineering](https://github.com/triggor/uni_assignments/tree/master/7.semester/Statistics_and_Probability_Theory)
- - [Selected_Areas_of_Practical_Software_Development](https://github.com/triggor/uni_assignments/tree/master/7.semester/Programming_in_.NET)
- - [Seminar_Security_and_Protection_of_Information](https://github.com/triggor/uni_assignments/tree/master/7.semester/Statistics_and_Probability_Theory)
- - [German](https://github.com/triggor/uni_assignments/tree/master/7.semester/Statistics_and_Probability_Theory)
+ - [Data_Mining](https://github.com/triggor/uni_assignments/tree/master/7.semester/Data_Mining)
+ - [Economics_of_European_integration](https://github.com/triggor/uni_assignments/tree/master/7.semester/Economics_of_European_integration)
+ - [Human_Computer_Interaction](https://github.com/triggor/uni_assignments/tree/master/7.semester/Human_Computer_Interaction)
+ - [Neural_Networks_and_Deep_Learning](https://github.com/triggor/uni_assignments/tree/master/7.semester/Neural_Networks_and_Deep_Learning)
+ - [Software_Engineering](https://github.com/triggor/uni_assignments/tree/master/7.semester/Software_Engineering)
+ - [Selected_Areas_of_Practical_Software_Development](https://github.com/triggor/uni_assignments/tree/master/7.semester/Selected_Areas_of_Practical_Software_Development)
+ - [Seminar_Security_and_Protection_of_Information](https://github.com/triggor/uni_assignments/tree/master/7.semester/Seminar_Security_and_Protection_of_Information)
+ - [German_B2II](https://github.com/triggor/uni_assignments/tree/master/7.semester/German_B2II)
  
  # [8. semester](https://github.com/triggor/uni_assignments/tree/master/8.semester) (current):
  - [Evolutional_Algorithms](https://github.com/triggor/uni_assignments/tree/master/8.semester/Application_Security)
