@@ -59,3 +59,4 @@ Here are uploaded my university assignments (mostly in Polish) along with my pro
  - [Artificial_Intelligence](https://github.com/triggor/uni_assignments/tree/master/8.semester/Programming_in_.NET)
  - [Graph_Databases](https://github.com/triggor/uni_assignments/tree/master/8.semester/Statistics_and_Probability_Theory)
  - [Distributed_Algorithms](https://github.com/triggor/uni_assignments/tree/master/8.semester/Statistics_and_Probability_Theory)
+ - [BEng_Thesis](https://github.com/triggor/uni_assignments/tree/master/8.semester/BEng_Thesis)
