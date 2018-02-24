@@ -36,9 +36,25 @@ Here are uploaded my university assignments (mostly in Polish) along with my pro
  - [Web_Development](https://github.com/triggor/uni_assignments/tree/master/5.semester/Web_Development)
  - [Workshop_for_Computer_Scientists](https://github.com/triggor/uni_assignments/tree/master/5.semester/Workshop_for_Computer_Scientists)
  
-# [6. semester](https://github.com/triggor/uni_assignments/tree/master/6.semester) (current):
+# [6. semester](https://github.com/triggor/uni_assignments/tree/master/6.semester):
  - [Application_Security](https://github.com/triggor/uni_assignments/tree/master/6.semester/Application_Security)
  - [Computer_Networks_and_Communications-CCNA](https://github.com/triggor/uni_assignments/tree/master/6.semester/Computer_Networks_and_Communications-CCNA)
  - [Databases](https://github.com/triggor/uni_assignments/tree/master/6.semester/Databases)
  - [Programming_in_.NET](https://github.com/triggor/uni_assignments/tree/master/6.semester/Programming_in_.NET)
  - [Statistics_and_Probability_Theory](https://github.com/triggor/uni_assignments/tree/master/6.semester/Statistics_and_Probability_Theory)
+ 
+ # [7. semester](https://github.com/triggor/uni_assignments/tree/master/7.semester):
+ - [Data_Mining](https://github.com/triggor/uni_assignments/tree/master/7.semester/Application_Security)
+ - [Economics_of_European_integration](https://github.com/triggor/uni_assignments/tree/master/7.semester/Computer_Networks_and_Communications-CCNA)
+ - [Human_Computer_Interaction](https://github.com/triggor/uni_assignments/tree/master/7.semester/Databases)
+ - [Neural_Networks_and_Deep_Learning](https://github.com/triggor/uni_assignments/tree/master/7.semester/Programming_in_.NET)
+ - [Software_Engineering](https://github.com/triggor/uni_assignments/tree/master/7.semester/Statistics_and_Probability_Theory)
+ - [Selected_Areas_of_Practical_Software_Development](https://github.com/triggor/uni_assignments/tree/master/7.semester/Programming_in_.NET)
+ - [Seminar_Security_and_Protection_of_Information](https://github.com/triggor/uni_assignments/tree/master/7.semester/Statistics_and_Probability_Theory)
+ 
+ # [8. semester](https://github.com/triggor/uni_assignments/tree/master/8.semester) (current):
+ - [Evolutional_Algorithms](https://github.com/triggor/uni_assignments/tree/master/8.semester/Application_Security)
+ - [Database_Applications_Design](https://github.com/triggor/uni_assignments/tree/master/8.semester/Computer_Networks_and_Communications-CCNA)
+ - [Object_Oriented_Software_Design](https://github.com/triggor/uni_assignments/tree/master/8.semester/Databases)
+ - [Artificial_Intelligence](https://github.com/triggor/uni_assignments/tree/master/8.semester/Programming_in_.NET)
+ - [Graph_Databases](https://github.com/triggor/uni_assignments/tree/master/8.semester/Statistics_and_Probability_Theory)
