@@ -53,10 +53,10 @@ Here are uploaded my university assignments (mostly in Polish) along with my pro
  - [German_B2II](https://github.com/triggor/uni_assignments/tree/master/7.semester/German_B2II)
  
  # [8. semester](https://github.com/triggor/uni_assignments/tree/master/8.semester) (current):
- - [Evolutional_Algorithms](https://github.com/triggor/uni_assignments/tree/master/8.semester/Application_Security)
- - [Database_Applications_Design](https://github.com/triggor/uni_assignments/tree/master/8.semester/Computer_Networks_and_Communications-CCNA)
- - [Object_Oriented_Software_Design](https://github.com/triggor/uni_assignments/tree/master/8.semester/Databases)
- - [Artificial_Intelligence](https://github.com/triggor/uni_assignments/tree/master/8.semester/Programming_in_.NET)
- - [Graph_Databases](https://github.com/triggor/uni_assignments/tree/master/8.semester/Statistics_and_Probability_Theory)
- - [Distributed_Algorithms](https://github.com/triggor/uni_assignments/tree/master/8.semester/Statistics_and_Probability_Theory)
+ - [Evolutional_Algorithms](https://github.com/triggor/uni_assignments/tree/master/8.semester/Evolutional_Algorithms)
+ - [Database_Applications_Design](https://github.com/triggor/uni_assignments/tree/master/8.semester/Database_Applications_Design)
+ - [Object_Oriented_Software_Design](https://github.com/triggor/uni_assignments/tree/master/8.semester/Object_Oriented_Software_Design)
+ - [Artificial_Intelligence](https://github.com/triggor/uni_assignments/tree/master/8.semester/Artificial_Intelligence)
+ - [Graph_Databases](https://github.com/triggor/uni_assignments/tree/master/8.semester/Graph_Databases)
+ - [Distributed_Algorithms](https://github.com/triggor/uni_assignments/tree/master/8.semester/Distributed_Algorithms)
  - [BEng_Thesis](https://github.com/triggor/uni_assignments/tree/master/8.semester/BEng_Thesis)
