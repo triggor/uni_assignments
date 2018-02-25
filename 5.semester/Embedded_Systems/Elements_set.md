@@ -1,3 +1,5 @@
+# Podstawowe elementy
+![alt text](https://github.com/triggor/nn-project-dont-decay/blob/master/plots.png)
 # Dodatkowe elementy do wypożyczenia
 ### Moduły TinkerKit:
 - Przycisk (button module)
