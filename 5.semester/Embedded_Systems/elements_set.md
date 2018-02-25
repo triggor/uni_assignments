@@ -1,5 +1,5 @@
 # Podstawowe elementy
-![alt text](https://github.com/triggor/nn-project-dont-decay/blob/master/plots.png)
+![alt text](https://github.com/triggor/uni_assignments/blob/master/5.semester/Embedded_Systems/basic_elements.jpg)
 # Dodatkowe elementy do wypożyczenia
 ### Moduły TinkerKit:
 - Przycisk (button module)
