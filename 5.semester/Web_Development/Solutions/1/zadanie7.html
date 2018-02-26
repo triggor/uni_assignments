@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Zadanie7</title>
+</head>
+<body>
+  
+  <h1>Formularz</h1>
+  <form>
+  <legend>Samochód:</legend>
+  <select id="Samochod" name="Samochod">
+	<option selected="selected" value="none">None</option>
+	<optgroup label="Mercedes">
+	  <option value="aclass">A-class</option>
+	  <option value="bclass">B-class</option>
+	</optgroup>
+	<optgroup label="BMW">
+	  <option value="ubuntud71">X3</option>
+	  <option value="ubuntus71">X5</option>
+	</optgroup>
+  </select>
+  <br/>
+  <legend>Zainteresowania:</legend>
+  <input name="c1" type="checkbox" value="0" /> Sport
+  <input name="c2" type="checkbox" value="1" /> Muzyka
+  <input name="c3" type="checkbox" checked="checked" value="2" /> Polityka
+  <br/>
+  <label>Imię:</label>
+  <input type="text" name="firstname">
+  <br/>
+  <legend>Płeć:</legend>
+  <input type="radio" checked="checked" name="sex" value="m"/> Mężczyzna
+  <input type="radio" name="sex" value="k"/> Kobieta
+  <br/>
+  <input type="submit" value="Wyślij">
+  </form>
+</body>
+</html>
