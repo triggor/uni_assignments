@@ -1,0 +1,238 @@
+/******************************ZADANIE_1*********************************/
+Analysis of Variance Table
+
+Response: razem
+          Df  Sum Sq Mean Sq F value    Pr(>F)    
+data       4 11291.4 2822.84  31.831 4.558e-16 ***
+Residuals 83  7360.5   88.68                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Call:
+lm(formula = razem ~ data, data = dane)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-16.3974  -6.0576  -0.0863   4.6424  28.0926 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  392.354      1.964 199.815  < 2e-16 ***
+data827        9.831      2.919   3.367  0.00115 ** 
+data829      -16.237      2.777  -5.847 9.55e-08 ***
+data830       -8.057      3.452  -2.334  0.02202 *  
+data831      -22.452      3.353  -6.695 2.38e-09 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 9.417 on 83 degrees of freedom
+Multiple R-squared:  0.6054,    Adjusted R-squared:  0.5864 
+F-statistic: 31.83 on 4 and 83 DF,  p-value: 4.558e-16
+
+/******************************ZADANIE_2*********************************/
+Analysis of Variance Table
+
+Response: razem
+          Df  Sum Sq Mean Sq F value    Pr(>F)    
+poziom     3 10102.2  3367.4  33.084 3.241e-14 ***
+Residuals 84  8549.7   101.8                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Call:
+lm(formula = razem ~ poziom, data = dane)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-16.3974  -6.9969  -0.8561   6.1884  28.0926 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 376.7870     2.1036 179.111  < 2e-16 ***
+poziomh      15.5674     2.9750   5.233 1.21e-06 ***
+poziomr      25.3983     3.1277   8.121 3.48e-12 ***
+pozioms      -0.6696     2.9750  -0.225    0.822    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 10.09 on 84 degrees of freedom
+Multiple R-squared:  0.5416,    Adjusted R-squared:  0.5252 
+F-statistic: 33.08 on 3 and 84 DF,  p-value: 3.241e-14
+
+/******************************ZADANIE_3*********************************/
+Analysis of Variance Table
+
+Response: czas
+           Df Sum Sq Mean Sq F value    Pr(>F)    
+odcinek     3 1649.3  549.76  30.977 < 2.2e-16 ***
+Residuals 348 6176.1   17.75                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Call:
+lm(formula = czas ~ odcinek, data = dane.odcinki)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-9.4135 -2.7949 -0.2135  2.2582 19.1965 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  92.9591     0.4491 206.998  < 2e-16 ***
+odcinekm10    3.7387     0.6351   5.887 9.27e-09 ***
+odcinekm15    5.3949     0.6351   8.495 5.87e-16 ***
+odcinekm20    5.1944     0.6351   8.179 5.42e-15 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 4.213 on 348 degrees of freedom
+Multiple R-squared:  0.2108,    Adjusted R-squared:  0.204 
+F-statistic: 30.98 on 3 and 348 DF,  p-value: < 2.2e-16
+
+/******************************ZADANIE_4*********************************/
+Analysis of Variance Table
+
+Response: razem
+          Df Sum Sq Mean Sq F value    Pr(>F)    
+kraj      22 8928.5  405.84   20.05 < 2.2e-16 ***
+poziom     3 8468.4 2822.79  139.45 < 2.2e-16 ***
+Residuals 62 1255.0   20.24                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Call:
+lm(formula = razem ~ kraj + poziom, data = dane)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-9.8692 -2.0941 -0.2095  1.6401 15.0102 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 386.0118     2.3950 161.175  < 2e-16 ***
+krajaus     -18.8775     3.1813  -5.934 1.44e-07 ***
+krajaut       2.0675     3.1813   0.650 0.518167    
+krajbul     -14.2275     3.1813  -4.472 3.37e-05 ***
+krajcan      -5.8325     3.1813  -1.833 0.071551 .  
+krajchn      -8.4375     3.1813  -2.652 0.010141 *  
+krajcro     -23.8011     3.4491  -6.901 3.19e-09 ***
+krajden      -9.1400     3.1813  -2.873 0.005560 ** 
+krajesp      -3.1375     3.1813  -0.986 0.327857    
+krajest      -6.5750     3.1813  -2.067 0.042941 *  
+krajgbr     -16.2575     3.1813  -5.110 3.32e-06 ***
+krajger     -20.2811     3.4491  -5.880 1.77e-07 ***
+krajhun      -0.7650     3.1813  -0.240 0.810763    
+krajisr      -7.7900     3.1813  -2.449 0.017181 *  
+krajita     -21.6644     3.4491  -6.281 3.71e-08 ***
+krajlat      14.1925     3.1813   4.461 3.50e-05 ***
+krajltu     -20.6625     3.1813  -6.495 1.60e-08 ***
+krajned      -8.6975     3.1813  -2.734 0.008147 ** 
+krajnor     -12.8650     3.1813  -4.044 0.000148 ***
+krajnzl     -18.5278     3.4491  -5.372 1.24e-06 ***
+krajrus       3.2300     3.1813   1.015 0.313909    
+krajsrb     -12.2525     3.1813  -3.851 0.000281 ***
+krajusa      -1.8700     3.1813  -0.588 0.558798    
+poziomh      15.5674     1.3267  11.734  < 2e-16 ***
+poziomr      22.9049     1.4168  16.167  < 2e-16 ***
+pozioms      -0.6696     1.3267  -0.505 0.615571    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 4.499 on 62 degrees of freedom
+Multiple R-squared:  0.9327,    Adjusted R-squared:  0.9056 
+F-statistic: 34.38 on 25 and 62 DF,  p-value: < 2.2e-16
+
+/******************************ZADANIE_5*********************************/
+Analysis of Variance Table
+
+Response: razem
+          Df  Sum Sq Mean Sq F value    Pr(>F)    
+poziom     3 10102.2  3367.4  32.200 1.064e-13 ***
+tor        5   288.1    57.6   0.551    0.7371    
+Residuals 79  8261.6   104.6                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Call:
+lm(formula = razem ~ poziom + tor, data = dane)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-14.8758  -7.2936  -0.9379   5.5079  27.3037 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 377.0158     3.1656 119.097  < 2e-16 ***
+poziomh      15.5674     3.0156   5.162 1.78e-06 ***
+poziomr      25.9663     3.2084   8.093 5.74e-12 ***
+pozioms      -0.6696     3.0156  -0.222    0.825    
+tor2         -2.5794     3.6155  -0.713    0.478    
+tor3         -1.2300     3.6155  -0.340    0.735    
+tor4         -1.6200     3.6155  -0.448    0.655    
+tor5          2.1921     3.6778   0.596    0.553    
+tor6          2.5616     4.3139   0.594    0.554    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 10.23 on 79 degrees of freedom
+Multiple R-squared:  0.5571,    Adjusted R-squared:  0.5122 
+F-statistic: 12.42 on 8 and 79 DF,  p-value: 2.343e-11
+
+/******************************ZADANIE_6*********************************/
+Analysis of Variance Table
+
+Response: razem
+           Df Sum Sq Mean Sq F value    Pr(>F)    
+kraj       32 133455  4170.5   2.501 0.0002535 ***
+Residuals 105 175090  1667.5                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Call:
+lm(formula = razem ~ kraj, data = dane3)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-358.15   -2.88   -0.78    2.66  126.70 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 448.8275    20.4176  21.982  < 2e-16 ***
+krajaut       3.8000    28.8749   0.132 0.895551    
+krajbel      21.1825    28.8749   0.734 0.464830    
+krajblr       2.0050    28.8749   0.069 0.944773    
+krajcan       5.2100    28.8749   0.180 0.857160    
+krajchn       2.2350    28.8749   0.077 0.938450    
+krajcze       2.1700    28.8749   0.075 0.940237    
+krajden       6.3775    28.8749   0.221 0.825625    
+krajesp     -90.6825    28.8749  -3.141 0.002191 ** 
+krajger       4.9375    28.8749   0.171 0.864556    
+krajina      39.0075    28.8749   1.351 0.179627    
+krajirl       3.5675    28.8749   0.124 0.901908    
+krajita      18.8605    27.3931   0.689 0.492649    
+krajkaz      37.0425    28.8749   1.283 0.202365    
+krajken      90.0775    28.8749   3.120 0.002338 ** 
+krajkor      42.0675    28.8749   1.457 0.148131    
+krajlat      14.8645    27.3931   0.543 0.588530    
+krajltu       0.4975    28.8749   0.017 0.986286    
+krajned       6.1350    28.8749   0.212 0.832154    
+krajngr      49.9700    28.8749   1.731 0.086467 .  
+krajnzl       8.2950    28.8749   0.287 0.774469    
+krajpol      11.9365    27.3931   0.436 0.663914    
+krajpur      51.3500    28.8749   1.778 0.078239 .  
+krajqat      48.4600    28.8749   1.678 0.096268 .  
+krajrus      11.7345    27.3931   0.428 0.669257    
+krajsrb      28.8025    27.3931   1.051 0.295466    
+krajsui       9.0750    28.8749   0.314 0.753927    
+krajswe       5.9205    27.3931   0.216 0.829305    
+krajtog     105.3400    28.8749   3.648 0.000413 ***
+krajukr      13.7325    28.8749   0.476 0.635357    
+krajusa       5.7800    28.8749   0.200 0.841732    
+krajvie      48.6575    28.8749   1.685 0.094937 .  
+krajzim       5.4575    28.8749   0.189 0.850454    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 40.84 on 105 degrees of freedom
+Multiple R-squared:  0.4325,    Adjusted R-squared:  0.2596 
+F-statistic: 2.501 on 32 and 105 DF,  p-value: 0.0002535

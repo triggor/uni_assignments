@@ -1,0 +1,173 @@
+> res.opady
+
+Call:
+lm(formula = opady ~ miesiac, data = dane.miesiace)
+
+Coefficients:
+ (Intercept)  miesiacOpGru  miesiacOpKwi  miesiacOpLip  miesiacOpLis  miesiacOpLut  miesiacOpMaj  
+      73.778       -32.889       -34.611         4.333       -30.056       -45.778       -12.944  
+miesiacOpMar  miesiacOpPaz  miesiacOpSie  miesiacOpSty  miesiacOpWrz  
+     -42.444       -32.556        -4.000       -41.056       -24.056  
+
+> anova(res.opady)
+Analysis of Variance Table
+
+Response: opady
+           Df Sum Sq Mean Sq F value    Pr(>F)    
+miesiac    11  59444  5404.0  105.29 < 2.2e-16 ***
+Residuals 204  10471    51.3                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+> res.opady3 <- lm(opady ~ miesiac, data=dane.miesiace3)
+> res.opady3
+
+Call:
+lm(formula = opady ~ miesiac, data = dane.miesiace3)
+
+Coefficients:
+ (Intercept)  miesiacOpLip  miesiacOpSie  miesiacOpWrz  
+      73.778         4.333        -4.000       -24.056  
+
+> anova(res.opady3)
+Analysis of Variance Table
+
+Response: opady
+          Df Sum Sq Mean Sq F value    Pr(>F)    
+miesiac    3 8509.7 2836.57  30.668 1.181e-12 ***
+Residuals 68 6289.6   92.49                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+> dane.miesiace4 <- dane4 %>% gather(miesiac, opady, c(OpCze, OpLip, OpSie))
+> res.opady4 <- lm(opady ~ miesiac, data=dane.miesiace4)
+> res.opady4
+
+Call:
+lm(formula = opady ~ miesiac, data = dane.miesiace4)
+
+Coefficients:
+ (Intercept)  miesiacOpLip  miesiacOpSie  
+      73.778         4.333        -4.000  
+
+> anova(res.opady4)
+Analysis of Variance Table
+
+Response: opady
+          Df Sum Sq Mean Sq F value  Pr(>F)  
+miesiac    2  625.3  312.67  2.7713 0.07202 .
+Residuals 51 5754.0  112.82                  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+=====================================================================================
+> round(cbind(res$var$coord[,1], res$var$cor[,2]), 3)
+            [,1]   [,2]
+Sty        0.805  0.387
+Lut        0.841  0.392
+Mar        0.765  0.325
+Kwi        0.350  0.668
+Maj        0.211  0.359
+Cze        0.349  0.511
+Lip        0.680  0.414
+Sie        0.635  0.575
+Wrz        0.831  0.324
+Paz        0.803  0.550
+Lis        0.809  0.314
+Gru        0.637  0.463
+Srednia    0.832  0.547
+Amplituda -0.601 -0.308
+Szer       0.283 -0.673
+Dlug      -0.784 -0.244
+Wysokosc  -0.567  0.519
+OpSty     -0.376  0.490
+OpLut     -0.402  0.769
+OpMar     -0.476  0.606
+OpKwi     -0.399  0.790
+OpMaj     -0.247  0.791
+OpCze     -0.513  0.548
+OpLip     -0.604  0.519
+OpSie     -0.548  0.608
+OpWrz     -0.638  0.463
+OpPaz     -0.522  0.535
+OpLis     -0.474  0.345
+OpGru     -0.400  0.500
+Suma      -0.619  0.761
+
+> dane[c("Olsztyn", "Szczecin"),]
+          Sty  Lut Mar Kwi  Maj  Cze  Lip  Sie  Wrz Paz Lis  Gru Srednia Amplituda   Szer   Dlug Wysokosc
+Olsztyn  -2.3 -1.6 1.8 7.4 12.8 15.5 17.9 17.3 12.7 8.0 2.7 -1.0     7.6      20.2 53.779 20.489      123
+Szczecin  0.2  0.9 4.0 8.6 13.6 16.2 18.6 18.1 13.9 9.4 4.5  1.1     9.1      18.4 53.430 14.529      147
+         OpSty OpLut OpMar OpKwi OpMaj OpCze OpLip OpSie OpWrz OpPaz OpLis OpGru Suma
+Olsztyn     36    26    33    37    54    84    79    77    59    50    56    47  638
+Szczecin    36    27    32    38    52    57    61    55    44    38    46    41  527
+
+> round(skalow[c("Olsztyn", "Szczecin"),], 2)
+           Sty   Lut   Mar   Kwi   Maj   Cze   Lip   Sie   Wrz   Paz   Lis   Gru Srednia Amplituda Szer
+Olsztyn  -0.64 -1.00 -1.47 -0.96 -1.34 -1.88 -1.84 -1.11 -1.45 -1.13 -1.04 -0.37   -1.32     -0.05 1.33
+Szczecin  1.68  1.48  1.13  0.46 -0.05 -0.30 -0.03  0.27  0.72  1.24  1.52  1.39    1.19     -1.83 1.06
+          Dlug Wysokosc OpSty OpLut OpMar OpKwi OpMaj OpCze OpLip OpSie OpWrz OpPaz OpLis OpGru  Suma
+Olsztyn   0.62    -0.21  0.71 -0.51  0.42 -0.38 -0.74  0.94  0.08  0.71  1.65  1.58  2.72  1.19  0.79
+Szczecin -1.76     0.09  0.71 -0.26  0.17 -0.21 -0.96 -1.54 -1.58 -1.45 -1.02 -0.58  0.51  0.02 -1.01
+
+
+> dimdesc(res)
+$Dim.1
+$Dim.1$quanti
+          correlation      p.value
+Lut         0.8410907 1.226129e-05
+Srednia     0.8320359 1.853392e-05
+Wrz         0.8312948 1.915092e-05
+Lis         0.8091140 4.775509e-05
+Sty         0.8047046 5.648056e-05
+Paz         0.8029057 6.041075e-05
+Mar         0.7651820 2.156288e-04
+Lip         0.6800038 1.902810e-03
+Gru         0.6370996 4.460159e-03
+Sie         0.6348263 4.649970e-03
+OpLis      -0.4735127 4.715517e-02
+OpMar      -0.4763434 4.566911e-02
+OpCze      -0.5134178 2.931495e-02
+OpPaz      -0.5219196 2.630563e-02
+OpSie      -0.5479939 1.855250e-02
+Wysokosc   -0.5674321 1.404612e-02
+Amplituda  -0.6007761 8.372797e-03
+OpLip      -0.6044187 7.886339e-03
+Suma       -0.6185929 6.205471e-03
+OpWrz      -0.6379376 4.391806e-03
+Dlug       -0.7836567 1.192556e-04
+
+
+$Dim.2
+$Dim.2$quanti
+         correlation      p.value
+OpMaj      0.7910313 9.265844e-05
+OpKwi      0.7895722 9.747795e-05
+OpLut      0.7685200 1.945109e-04
+Suma       0.7609366 2.452539e-04
+Kwi        0.6678943 2.452542e-03
+OpSie      0.6079623 7.435237e-03
+OpMar      0.6057414 7.715442e-03
+Sie        0.5748181 1.258220e-02
+Paz        0.5499498 1.805329e-02
+OpCze      0.5479309 1.856877e-02
+Srednia    0.5466349 1.890575e-02
+OpPaz      0.5346455 2.225695e-02
+OpLip      0.5189866 2.731528e-02
+Wysokosc   0.5187181 2.740917e-02
+Cze        0.5106414 3.035340e-02
+OpGru      0.4996143 3.476173e-02
+OpSty      0.4897581 3.910484e-02
+Szer      -0.6725501 2.227499e-03
+
+
+$Dim.3
+$Dim.3$quanti
+          correlation      p.value
+Szer        0.6379554 0.0043903643
+OpSty       0.5885697 0.0101819399
+OpLis       0.5072002 0.0316798071
+Lip        -0.5618484 0.0152401940
+Amplituda  -0.6492179 0.0035518922
+Cze        -0.7481769 0.0003557409
+Maj        -0.7794495 0.0001371380
+
