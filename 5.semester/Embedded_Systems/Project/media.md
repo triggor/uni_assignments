@@ -1,4 +1,5 @@
 # Project description
+[![Watch the video](https://raw.github.com/GabLeRoux/WebMole/master/ressources/WebMole_Youtube_Video.png)](https://youtu.be/TADzXskFQOY)
 ![alt text](https://github.com/triggor/uni_assignments/blob/master/5.semester/Embedded_Systems/Project/1.jpg)
 ![alt text](https://github.com/triggor/uni_assignments/blob/master/5.semester/Embedded_Systems/Project/2.jpg)
 ![alt text](https://github.com/triggor/uni_assignments/blob/master/5.semester/Embedded_Systems/Project/3.jpg)
