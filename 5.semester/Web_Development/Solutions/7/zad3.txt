@@ -1,0 +1,72 @@
+POST /zad2.php?name=345345 HTTP/1.1
+Host: localhost
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+Cache-Control: no-cache
+Postman-Token: 5aa2817b-8b2d-717a-e074-a95d105c0115
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="name"
+
+sdfsdf
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="namea"
+
+123456789
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="file"; filename=""
+Content-Type: 
+
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+
+
+
+
+
+
+
+Frame 6: 581 bytes on wire (4648 bits), 581 bytes captured (4648 bits) on interface 0
+Ethernet II, Src: 00:00:00_00:00:00 (00:00:00:00:00:00), Dst: 00:00:00_00:00:00 (00:00:00:00:00:00)
+Internet Protocol Version 6, Src: ::1, Dst: ::1
+Transmission Control Protocol, Src Port: 57360 (57360), Dst Port: 80 (80), Seq: 1, Ack: 1, Len: 495
+    Source Port: 57360
+    Destination Port: 80
+    [Stream index: 1]
+    [TCP Segment Len: 495]
+    Sequence number: 1    (relative sequence number)
+    [Next sequence number: 496    (relative sequence number)]
+    Acknowledgment number: 1    (relative ack number)
+    Header Length: 32 bytes
+    Flags: 0x018 (PSH, ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Nonce: Not set
+        .... 0... .... = Congestion Window Reduced (CWR): Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgment: Set
+        .... .... 1... = Push: Set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+        [TCP Flags: *******AP***]
+    Window size value: 342
+    [Calculated window size: 43776]
+    [Window size scaling factor: 128]
+    Checksum: 0x0217 [validation disabled]
+        [Good Checksum: False]
+        [Bad Checksum: False]
+    Urgent pointer: 0
+    Options: (12 bytes), No-Operation (NOP), No-Operation (NOP), Timestamps
+        No-Operation (NOP)
+        No-Operation (NOP)
+        Timestamps: TSval 1106044, TSecr 1106043
+            Kind: Time Stamp Option (8)
+            Length: 10
+            Timestamp value: 1106044
+            Timestamp echo reply: 1106043
+    [SEQ/ACK analysis]
+        [iRTT: 0.000028315 seconds]
+        [Bytes in flight: 495]
+    TCP segment data (495 bytes)
+

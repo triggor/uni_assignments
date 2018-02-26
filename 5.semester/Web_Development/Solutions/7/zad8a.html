@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+var pairs = {};
+var getCookies = function(){
+  pairs = document.cookie.split(";");
+  var cookies = {};
+  for (var i=0; i<pairs.length; i++){
+    var pair = pairs[i].split("=");
+    cookies[pair[0]] = unescape(pair[1]);
+  }
+  return cookies;
+}
+
+var myCookies = getCookies();
+
+var showCookies = function(){
+	document.getElementById("cookie0").innerHTML = "\nCookie0: " + myCookies[0];
+	document.getElementById("cookie1").innerHTML = "\nCookie1: " + myCookies.Expires;
+	document.getElementById("cookie2").innerHTML = "\nCookie2: " + myCookies.theme;
+	document.getElementById("cookie3").innerHTML = "\nCookie3: " + myCookies.sessionToken;
+}
+
+</script>
+</head>
+<body onload="showCookies">
+STRONA
+<span id="cookie0" onckick="function(){alert("AAAA");document.getElementById("cookie0").innerHTML = "\nCookie0: " + pairs[0];}">ClickME</span>
+<span id="cookie1"></span>
+<span id="cookie2"></span>
+<span id="cookie3"></span>
+<span id="cookie4"></span>
+</body>
+</html>
+

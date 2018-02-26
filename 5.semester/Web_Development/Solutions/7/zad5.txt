@@ -1,0 +1,26 @@
+Cache request directives:
+
+Cache-Control: max-age=<seconds>
+Cache-Control: max-stale[=<seconds>]
+Cache-Control: min-fresh=<seconds>
+Cache-control: no-cache 
+Cache-control: no-store
+Cache-control: no-transform
+Cache-control: only-if-cached
+
+
+Cache response directives:
+
+Cache-control: must-revalidate
+Cache-control: no-cache
+Cache-control: no-store
+Cache-control: no-transform
+Cache-control: public
+Cache-control: private
+Cache-control: proxy-revalidate
+Cache-Control: max-age=<seconds>
+Cache-control: s-maxage=<seconds>
+
+Source: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control
+
+NEW DATA
