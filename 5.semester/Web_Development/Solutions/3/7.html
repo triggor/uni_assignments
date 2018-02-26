@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<HTML>
+ <HEAD>
+ <TITLE>Moja strona domowa</TITLE>
+  <style type="text/css">
+ .foo > p {background:lightgray;}
+ li:first-of-type + li {
+  color: red;
+}
+p + p {
+  margin: 10px;
+}
+ </style>
+ </HEAD>
+ <BODY>
+
+<div class="foo">
+<p>direct child1</p>
+<p>direct child2</p>
+<div><p>descendant</p></div>
+<div>
+<ul>
+  <li>One</li>
+  <li>Two</li>
+  <li>Three</li>
+</ul>
+<div>
+  <p>I'm a paragraph</p>
+  <p>I get selected!</p>
+</div>
+
+<div>
+  <p>I'm a paragraph</p>
+  <h2>Monkey hair</h2>
+  <p>I will NOT get selected</p>
+</div>
+
+ </BODY>
+</HTML>
