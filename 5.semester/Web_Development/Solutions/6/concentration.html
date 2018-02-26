@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html> <!-- Author: Igor Tryhub, 275235 -->
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Concentration Game</title>
+	<link rel="stylesheet" type="text/css" href="concentration.css">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="concentration.js"></script>
+    <!--<script type="text/javascript">
+        class Card {
+            backPath: string; //="back.png";
+            public static className: string;
+            public facePath: string;
+            constructor(path) {
+                this.backPath="back.png" ;
+                this.facePath=path;
+                this.className="card" ;
+            }
+
+        }
+        let ccc = new Card("hahah");
+        console.log(ccc.backPath); // error
+    </script>
+	<script type="text/javascript" src="concentration.js"></script>
+    <script type="text/javascript" src="typescript.min.js"></script>
+        -->
+</head>
+<body>
+<div id="welcome">
+	<h3 id="rules"> Below is a 5x4 concentration game. 
+	In the cards faces there are <a id="paintings_link" href="http://10mosttoday.com/10-most-famous-paintings-in-the-world/">10 most famous paintings in the world</a>. </br>
+	Explore them and match all the pairs in less than 15 attempts in order to win. </br>Good luck!</h3>
+</div>
+<div id="stat">
+	<h2>Matched: <span id="guessed"></span></h2>
+	<h2 id="attLabel">Attempts: <span id="attempts"></span></h2>
+	</br>
+</div>
+<div id="gamePanel"></div>
+</body>
+</html>

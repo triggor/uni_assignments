@@ -1,0 +1,46 @@
+﻿#gamePanel, #stat{
+	margin: auto;
+	width: 525px;
+	text-align: center;
+}
+#welcome{
+	text-align: center;
+}
+h2{
+	display: inline-block;
+}
+#attLabel{
+	padding-left: 70px;
+}
+br{
+	clear:left;
+}
+#attempts{
+	color: red;
+}
+#guessed{
+	color: green;
+}
+#rules, #paintings_link{
+	color: grey;
+}
+.field{
+	width:105px;
+	height:125px;
+	float:left; 
+	text-align:center;
+}
+.card{
+	width:90px;
+	height:115px;
+	border-radius: 5px;
+}
+.card:hover{
+   border-style: solid;
+   border-width: 2px;
+   border-color: grey;
+   box-shadow: 2px 2px 3px black;
+}
+.guessed{
+	display: none;
+}
