@@ -1,0 +1,1870 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <head xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5" />
+    <link rel="stylesheet" href="3.css" />
+    <title>AdventureWorks - tables</title>
+    <script type="text/javascript" src="http://gc.kis.scr.kaspersky-labs.com/7CED84D7-4D40-0148-8E12-352E093E92B7/main.js" charset="UTF-8"></script><script language="JavaScript" src="http://elsasoft.com/samples/sqlserver_adventureworks/sqlserver.spring.katmai.adventureworks/resort_table.js">
+    </script>
+    <script language="javascript">
+//
+// this hides the SVG if you are on IE, 
+// and hides the VML if you are NOT on IE.
+//
+function init()
+{
+  var node = null;
+  var isIE = navigator.userAgent.indexOf("MSIE") != -1;
+
+  showhideIfIE('FK_SVG', isIE, true);
+  showhideIfIE('DEPENDENCY_SVG', isIE, true);
+  showhideIfIE('MODEL_SVG', isIE, true); 
+  showhideIfIE('FK_VML', isIE, false);
+  showhideIfIE('DEPENDENCY_VML', isIE, false);
+  showhideIfIE('MODEL_VML', isIE, false);
+}   
+
+function showhideIfIE(elementName, isIE, hide)
+{
+  node = document.getElementById(elementName);
+  if (node != null) 
+  {
+    if (hide) 
+      node.style.display = isIE ? 'none' : 'block';
+    else
+      node.style.display = isIE ? 'block' : 'none';
+  }
+}
+      </script>
+  </head>
+  <body onload="init()">
+<table class="dtTABLE" style="margin-left: 20px; margin-top:25px;">
+        <thead>
+          <tr valign="top">
+            <th style="cursor:pointer;
+			cursor:hand;
+			height: 0;
+			line-height: 0;
+			padding-top: 0;
+			padding-bottom: 0;
+			color: transparent;
+			border: none;
+			white-space: nowrap;" onclick="resortColumn(this)">name<div style="position:fixed;color:black;top:10px;background-color:white;">name</div></th>
+             <th style="cursor:pointer;
+			cursor:hand;
+			height: 0;
+			line-height: 0;
+			padding-top: 0;
+			padding-bottom: 0;
+			color: transparent;
+			border: none;
+			white-space: nowrap;" onclick="resortColumn(this)" sorttype="date100">created<div style="position:fixed;color:black;top:10px;">created</div></th>
+             <th style="cursor:pointer;
+			cursor:hand;
+			height: 0;
+			line-height: 0;
+			padding-top: 0;
+			padding-bottom: 0;
+			color: transparent;
+			border: none;
+			white-space: nowrap;" onclick="resortColumn(this)" sorttype="date100">modified<div style="position:fixed;color:black;top:10px;">modified</div></th>
+             <th style="cursor:pointer;
+			cursor:hand;
+			height: 0;
+			line-height: 0;
+			padding-top: 0;
+			padding-bottom: 0;
+			color: transparent;
+			border: none;
+			white-space: nowrap;" onclick="resortColumn(this)" sorttype="number">columns<div style="position:fixed;color:black;top:10px;">columns</div></th>
+             <th style="cursor:pointer;
+			cursor:hand;
+			height: 0;
+			line-height: 0;
+			padding-top: 0;
+			padding-bottom: 0;
+			color: transparent;
+			border: none;
+			white-space: nowrap;" onclick="resortColumn(this)" sorttype="number">rows<div style="position:fixed;color:black;top:10px;">rows</div></th>
+             <th style="cursor:pointer;
+			cursor:hand;
+			height: 0;
+			line-height: 0;
+			padding-top: 0;
+			padding-bottom: 0;
+			color: transparent;
+			border: none;
+			white-space: nowrap;" onclick="resortColumn(this)" sorttype="number">indexes<div style="position:fixed;color:black;top:10px;">indexes</div></th>
+             <th style="cursor:pointer;
+			cursor:hand;
+			height: 0;
+			line-height: 0;
+			padding-top: 0;
+			padding-bottom: 0;
+			color: transparent;
+			border: none;
+			white-space: nowrap;" onclick="resortColumn(this)" sorttype="number">triggers<div style="position:fixed;color:black;top:10px;">triggers</div></th>
+             <th style="cursor:pointer;
+			cursor:hand;
+			height: 0;
+			line-height: 0;
+			padding-top: 0;
+			padding-bottom: 0;
+			color: transparent;
+			border: none;
+			white-space: nowrap;" onclick="resortColumn(this)" sorttype="number">constraints<div style="position:fixed;color:black;top:10px;">constraints</div></th>
+             <th style="cursor:pointer;
+			cursor:hand;
+			height: 0;
+			line-height: 0;
+			padding-top: 0;
+			padding-bottom: 0;
+			color: transparent;
+			border: none;
+			white-space: nowrap;" onclick="resortColumn(this)" sorttype="number">refers to<div style="position:fixed;color:black;top:10px;">refers to</div></th>
+             <th style="cursor:pointer;
+			cursor:hand;
+			height: 0;
+			line-height: 0;
+			padding-top: 0;
+			padding-bottom: 0;
+			color: transparent;
+			border: none;
+			white-space: nowrap;" onclick="resortColumn(this)" sorttype="number">refers from<div style="position:fixed;color:black;top:10px;">refers from</div></th>
+             <th style="cursor:pointer;
+			cursor:hand;
+			height: 0;
+			line-height: 0;
+			padding-top: 0;
+			padding-bottom: 0;
+			color: transparent;
+			border: none;
+			white-space: nowrap;" onclick="resortColumn(this)" sorttype="number">dependents<div style="position:fixed;color:black;top:10px;">dependents</div></th>
+             <th style="cursor:pointer;
+			cursor:hand;
+			height: 0;
+			line-height: 0;
+			padding-top: 0;
+			padding-bottom: 0;
+			color: transparent;
+			border: none;
+			white-space: nowrap;" onclick="resortColumn(this)" sorttype="number">row size<div style="position:fixed;color:black;top:10px;">row size</div></th>
+             <th style="cursor:pointer;
+			cursor:hand;
+			height: 0;
+			line-height: 0;
+			padding-top: 0;
+			padding-bottom: 0;
+			color: transparent;
+			border: none;
+			white-space: nowrap;" onclick="resortColumn(this)" sorttype="number">data<div style="position:fixed;color:black;top:10px;">data</div></th>
+             <th style="cursor:pointer;
+			cursor:hand;
+			height: 0;
+			line-height: 0;
+			padding-top: 0;
+			padding-bottom: 0;
+			color: transparent;
+			border: none;
+			white-space: nowrap;" onclick="resortColumn(this)" sorttype="number">indexes<div style="position:fixed;color:black;top:10px;">indexes</div></th>
+             <th style="cursor:pointer;
+			cursor:hand;
+			height: 0;
+			line-height: 0;
+			padding-top: 0;
+			padding-bottom: 0;
+			color: transparent;
+			border: none;
+			white-space: nowrap;" onclick="resortColumn(this)">comment<div style="position:fixed;color:black;top:10px;">comment</div></th>
+          </tr>
+        </thead>
+        <tbody style="position:relative;overflow-y:auto;height:800px;top:50px;">
+		<tr valign="top">
+            <td>
+              <a href="table_dboAWBuildVersion.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">AWBuildVersion</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">4</td>
+            <td align="right">1</td>
+            <td align="right">1</td>
+            <td align="right">0</td>
+            <td align="right">1</td>
+            <td align="right">0</td>
+            <td align="right">0</td>
+            <td align="right">1</td>
+            <td align="right">117&nbsp;b</td>
+            <td align="right">8&nbsp;kb</td>
+            <td align="right">8&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Current version number of the AdventureWorks sample database. &nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_dboDatabaseLog.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">DatabaseLog</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">8</td>
+            <td align="right">1,566</td>
+            <td align="right">1</td>
+            <td align="right">0</td>
+            <td align="right">1</td>
+            <td align="right">0</td>
+            <td align="right">0</td>
+            <td align="right">1</td>
+            <td align="right">4,294,968,329&nbsp;b</td>
+            <td align="right">6,232&nbsp;kb</td>
+            <td align="right">48&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Audit table tracking all DDL changes made to the AdventureWorks database. Data is captured by the database trigger ddlDatabaseTriggerLog.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_dboErrorLog.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">ErrorLog</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">9</td>
+            <td align="right">0</td>
+            <td align="right">1</td>
+            <td align="right">0</td>
+            <td align="right">1</td>
+            <td align="right">0</td>
+            <td align="right">0</td>
+            <td align="right">2</td>
+            <td align="right">16,788&nbsp;b</td>
+            <td align="right">0&nbsp;kb</td>
+            <td align="right">
+                                0&nbsp;kb</td>
+            <td style="max-width: 100px;
+    overflow: auto;
+    text-overflow: ellipsis;
+    white-space: nowrap;">
+              <span class="desc">
+                <span><div>Audit table tracking errors in the the AdventureWorks database that are caught by the CATCH block of a TRY...CATCH construct. Data is inserted by stored procedure dbo.uspLogError when it is executed from inside the CATCH block of a TRY...CATCH construct.&nbsp;
+  </div></span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_HumanResourcesDepartment.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">Department</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">4</td>
+            <td align="right">16</td>
+            <td align="right">2</td>
+            <td align="right">0</td>
+            <td align="right">1</td>
+            <td align="right">0</td>
+            <td align="right">1</td>
+            <td align="right">4</td>
+            <td align="right">410&nbsp;b</td>
+            <td align="right">8&nbsp;kb</td>
+            <td align="right">24&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Lookup table containing the departments within the Adventure Works Cycles company.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_HumanResourcesEmployee.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">Employee</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">16</td>
+            <td align="right">290</td>
+            <td align="right">5</td>
+            <td align="right">1</td>
+            <td align="right">9</td>
+            <td align="right">2</td>
+            <td align="right">6</td>
+            <td align="right">23</td>
+            <td align="right">1,348&nbsp;b</td>
+            <td align="right">56&nbsp;kb</td>
+            <td align="right">120&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Employee information such as salary, department, and title.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_HumanResourcesEmployeeAddress.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">EmployeeAddress</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">4</td>
+            <td align="right">290</td>
+            <td align="right">2</td>
+            <td align="right">0</td>
+            <td align="right">4</td>
+            <td align="right">2</td>
+            <td align="right">0</td>
+            <td align="right">4</td>
+            <td align="right">32&nbsp;b</td>
+            <td align="right">16&nbsp;kb</td>
+            <td align="right">32&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Cross-reference table mapping employees to their address(es).&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_HumanResourcesEmployeeDepartmentHistory.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">EmployeeDepartmentHistory</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">6</td>
+            <td align="right">296</td>
+            <td align="right">3</td>
+            <td align="right">0</td>
+            <td align="right">8</td>
+            <td align="right">3</td>
+            <td align="right">0</td>
+            <td align="right">6</td>
+            <td align="right">31&nbsp;b</td>
+            <td align="right">16&nbsp;kb</td>
+            <td align="right">48&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Employee department transfers.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_HumanResourcesEmployeePayHistory.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">EmployeePayHistory</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">5</td>
+            <td align="right">316</td>
+            <td align="right">1</td>
+            <td align="right">0</td>
+            <td align="right">5</td>
+            <td align="right">1</td>
+            <td align="right">0</td>
+            <td align="right">4</td>
+            <td align="right">29&nbsp;b</td>
+            <td align="right">16&nbsp;kb</td>
+            <td align="right">16&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Employee pay history.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_HumanResourcesJobCandidate.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">JobCandidate</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">4</td>
+            <td align="right">13</td>
+            <td align="right">2</td>
+            <td align="right">0</td>
+            <td align="right">2</td>
+            <td align="right">1</td>
+            <td align="right">0</td>
+            <td align="right">5</td>
+            <td align="right">2,147,483,662&nbsp;b</td>
+            <td align="right">128&nbsp;kb</td>
+            <td align="right">32&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Résumés submitted to Human Resources by job applicants.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_HumanResourcesShift.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">Shift</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">5</td>
+            <td align="right">3</td>
+            <td align="right">3</td>
+            <td align="right">0</td>
+            <td align="right">1</td>
+            <td align="right">0</td>
+            <td align="right">1</td>
+            <td align="right">4</td>
+            <td align="right">225&nbsp;b</td>
+            <td align="right">8&nbsp;kb</td>
+            <td align="right">40&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Work shift lookup table.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_PersonAddress.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">Address</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">8</td>
+            <td align="right">19,614</td>
+            <td align="right">4</td>
+            <td align="right">0</td>
+            <td align="right">2</td>
+            <td align="right">1</td>
+            <td align="right">5</td>
+            <td align="right">9</td>
+            <td align="right">692&nbsp;b</td>
+            <td align="right">2,240&nbsp;kb</td>
+            <td align="right">2,504&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Street address information for customers, employees, and vendors.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_PersonAddressType.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">AddressType</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">4</td>
+            <td align="right">6</td>
+            <td align="right">3</td>
+            <td align="right">0</td>
+            <td align="right">1</td>
+            <td align="right">0</td>
+            <td align="right">2</td>
+            <td align="right">5</td>
+            <td align="right">228&nbsp;b</td>
+            <td align="right">8&nbsp;kb</td>
+            <td align="right">40&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Types of addresses stored in the Address table. &nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_PersonContact.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">Contact</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">15</td>
+            <td align="right">19,972</td>
+            <td align="right">4</td>
+            <td align="right">0</td>
+            <td align="right">2</td>
+            <td align="right">0</td>
+            <td align="right">6</td>
+            <td align="right">17</td>
+            <td align="right">2,147,484,788&nbsp;b</td>
+            <td align="right">4,576&nbsp;kb</td>
+            <td align="right">1,960&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Names of each employee, customer contact, and vendor contact.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_PersonContactType.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">ContactType</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">3</td>
+            <td align="right">20</td>
+            <td align="right">2</td>
+            <td align="right">0</td>
+            <td align="right">1</td>
+            <td align="right">0</td>
+            <td align="right">2</td>
+            <td align="right">5</td>
+            <td align="right">212&nbsp;b</td>
+            <td align="right">8&nbsp;kb</td>
+            <td align="right">24&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Lookup table containing the types of contacts stored in Contact.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_PersonCountryRegion.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">CountryRegion</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">3</td>
+            <td align="right">238</td>
+            <td align="right">2</td>
+            <td align="right">0</td>
+            <td align="right">1</td>
+            <td align="right">0</td>
+            <td align="right">2</td>
+            <td align="right">8</td>
+            <td align="right">220&nbsp;b</td>
+            <td align="right">16&nbsp;kb</td>
+            <td align="right">32&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Lookup table containing the ISO standard codes for countries and regions.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_PersonStateProvince.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">StateProvince</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">8</td>
+            <td align="right">181</td>
+            <td align="right">4</td>
+            <td align="right">0</td>
+            <td align="right">3</td>
+            <td align="right">2</td>
+            <td align="right">2</td>
+            <td align="right">10</td>
+            <td align="right">256&nbsp;b</td>
+            <td align="right">16&nbsp;kb</td>
+            <td align="right">64&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>State and province lookup table.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_ProductionBillOfMaterials.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">BillOfMaterials</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">9</td>
+            <td align="right">2,679</td>
+            <td align="right">3</td>
+            <td align="right">0</td>
+            <td align="right">8</td>
+            <td align="right">3</td>
+            <td align="right">0</td>
+            <td align="right">9</td>
+            <td align="right">55&nbsp;b</td>
+            <td align="right">160&nbsp;kb</td>
+            <td align="right">200&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Items required to make bicycles and bicycle subassemblies. It identifies the heirarchical relationship between a parent product and its components.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_ProductionCulture.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">Culture</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">3</td>
+            <td align="right">8</td>
+            <td align="right">2</td>
+            <td align="right">0</td>
+            <td align="right">1</td>
+            <td align="right">0</td>
+            <td align="right">1</td>
+            <td align="right">2</td>
+            <td align="right">232&nbsp;b</td>
+            <td align="right">8&nbsp;kb</td>
+            <td align="right">24&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Lookup table containing the languages in which some AdventureWorks data is stored.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_ProductionDocument.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">Document</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">10</td>
+            <td align="right">9</td>
+            <td align="right">2</td>
+            <td align="right">0</td>
+            <td align="right">2</td>
+            <td align="right">0</td>
+            <td align="right">1</td>
+            <td align="right">3</td>
+            <td align="right">4,294,969,163&nbsp;b</td>
+            <td align="right">344&nbsp;kb</td>
+            <td align="right">24&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Product maintenance documents.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_ProductionIllustration.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">Illustration</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">3</td>
+            <td align="right">5</td>
+            <td align="right">1</td>
+            <td align="right">0</td>
+            <td align="right">1</td>
+            <td align="right">0</td>
+            <td align="right">1</td>
+            <td align="right">1</td>
+            <td align="right">2,147,483,658&nbsp;b</td>
+            <td align="right">184&nbsp;kb</td>
+            <td align="right">8&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Bicycle assembly diagrams.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_ProductionLocation.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">Location</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">5</td>
+            <td align="right">14</td>
+            <td align="right">2</td>
+            <td align="right">0</td>
+            <td align="right">3</td>
+            <td align="right">0</td>
+            <td align="right">2</td>
+            <td align="right">4</td>
+            <td align="right">219&nbsp;b</td>
+            <td align="right">8&nbsp;kb</td>
+            <td align="right">24&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Product inventory and manufacturing locations.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_ProductionProduct.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">Product</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">25</td>
+            <td align="right">504</td>
+            <td align="right">4</td>
+            <td align="right">0</td>
+            <td align="right">15</td>
+            <td align="right">4</td>
+            <td align="right">14</td>
+            <td align="right">20</td>
+            <td align="right">517&nbsp;b</td>
+            <td align="right">104&nbsp;kb</td>
+            <td align="right">120&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Products sold or used in the manfacturing of sold products.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_ProductionProductCategory.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">ProductCategory</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">4</td>
+            <td align="right">4</td>
+            <td align="right">3</td>
+            <td align="right">0</td>
+            <td align="right">1</td>
+            <td align="right">0</td>
+            <td align="right">1</td>
+            <td align="right">3</td>
+            <td align="right">228&nbsp;b</td>
+            <td align="right">8&nbsp;kb</td>
+            <td align="right">40&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>High-level product categorization.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_ProductionProductCostHistory.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">ProductCostHistory</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">5</td>
+            <td align="right">395</td>
+            <td align="right">1</td>
+            <td align="right">0</td>
+            <td align="right">5</td>
+            <td align="right">1</td>
+            <td align="right">0</td>
+            <td align="right">4</td>
+            <td align="right">36&nbsp;b</td>
+            <td align="right">24&nbsp;kb</td>
+            <td align="right">16&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Changes in the cost of a product over time.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_ProductionProductDescription.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">ProductDescription</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">4</td>
+            <td align="right">762</td>
+            <td align="right">2</td>
+            <td align="right">0</td>
+            <td align="right">1</td>
+            <td align="right">0</td>
+            <td align="right">1</td>
+            <td align="right">3</td>
+            <td align="right">1,628&nbsp;b</td>
+            <td align="right">144&nbsp;kb</td>
+            <td align="right">56&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Product descriptions in several languages.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_ProductionProductDocument.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">ProductDocument</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">3</td>
+            <td align="right">32</td>
+            <td align="right">1</td>
+            <td align="right">0</td>
+            <td align="right">4</td>
+            <td align="right">2</td>
+            <td align="right">0</td>
+            <td align="right">1</td>
+            <td align="right">16&nbsp;b</td>
+            <td align="right">8&nbsp;kb</td>
+            <td align="right">8&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Cross-reference table mapping products to related product documents.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_ProductionProductInventory.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">ProductInventory</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">7</td>
+            <td align="right">1,069</td>
+            <td align="right">1</td>
+            <td align="right">0</td>
+            <td align="right">6</td>
+            <td align="right">2</td>
+            <td align="right">0</td>
+            <td align="right">4</td>
+            <td align="right">73&nbsp;b</td>
+            <td align="right">56&nbsp;kb</td>
+            <td align="right">16&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Product inventory information.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_ProductionProductListPriceHistory.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">ProductListPriceHistory</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">5</td>
+            <td align="right">395</td>
+            <td align="right">1</td>
+            <td align="right">0</td>
+            <td align="right">5</td>
+            <td align="right">1</td>
+            <td align="right">0</td>
+            <td align="right">5</td>
+            <td align="right">36&nbsp;b</td>
+            <td align="right">24&nbsp;kb</td>
+            <td align="right">16&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Changes in the list price of a product over time.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_ProductionProductModel.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">ProductModel</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">6</td>
+            <td align="right">128</td>
+            <td align="right">5</td>
+            <td align="right">0</td>
+            <td align="right">1</td>
+            <td align="right">0</td>
+            <td align="right">3</td>
+            <td align="right">8</td>
+            <td align="right">4,294,967,520&nbsp;b</td>
+            <td align="right">144&nbsp;kb</td>
+            <td align="right">48&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Product model classification.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_ProductionProductModelIllustration.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">ProductModelIllustration</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">3</td>
+            <td align="right">7</td>
+            <td align="right">1</td>
+            <td align="right">0</td>
+            <td align="right">4</td>
+            <td align="right">2</td>
+            <td align="right">0</td>
+            <td align="right">1</td>
+            <td align="right">16&nbsp;b</td>
+            <td align="right">8&nbsp;kb</td>
+            <td align="right">8&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Cross-reference table mapping product models and illustrations.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_ProductionProductModelProductDescriptionCulture.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">ProductModelProductDescriptionCulture</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">4</td>
+            <td align="right">762</td>
+            <td align="right">1</td>
+            <td align="right">0</td>
+            <td align="right">6</td>
+            <td align="right">3</td>
+            <td align="right">0</td>
+            <td align="right">2</td>
+            <td align="right">40&nbsp;b</td>
+            <td align="right">32&nbsp;kb</td>
+            <td align="right">16&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Cross-reference table mapping product descriptions and the language the description is written in.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_ProductionProductPhoto.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">ProductPhoto</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">6</td>
+            <td align="right">101</td>
+            <td align="right">1</td>
+            <td align="right">0</td>
+            <td align="right">1</td>
+            <td align="right">0</td>
+            <td align="right">1</td>
+            <td align="right">1</td>
+            <td align="right">4,294,967,706&nbsp;b</td>
+            <td align="right">2,240&nbsp;kb</td>
+            <td align="right">16&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Product images.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_ProductionProductProductPhoto.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">ProductProductPhoto</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">4</td>
+            <td align="right">504</td>
+            <td align="right">1</td>
+            <td align="right">0</td>
+            <td align="right">4</td>
+            <td align="right">2</td>
+            <td align="right">0</td>
+            <td align="right">1</td>
+            <td align="right">16&nbsp;b</td>
+            <td align="right">16&nbsp;kb</td>
+            <td align="right">40&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Cross-reference table mapping products and product photos.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_ProductionProductReview.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">ProductReview</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">8</td>
+            <td align="right">4</td>
+            <td align="right">2</td>
+            <td align="right">0</td>
+            <td align="right">3</td>
+            <td align="right">1</td>
+            <td align="right">0</td>
+            <td align="right">3</td>
+            <td align="right">15,828&nbsp;b</td>
+            <td align="right">16&nbsp;kb</td>
+            <td align="right">56&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Customer reviews of products they have purchased.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_ProductionProductSubcategory.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">ProductSubcategory</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">5</td>
+            <td align="right">37</td>
+            <td align="right">3</td>
+            <td align="right">0</td>
+            <td align="right">2</td>
+            <td align="right">1</td>
+            <td align="right">1</td>
+            <td align="right">3</td>
+            <td align="right">232&nbsp;b</td>
+            <td align="right">8&nbsp;kb</td>
+            <td align="right">40&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Product subcategories. See ProductCategory table.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_ProductionScrapReason.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">ScrapReason</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">3</td>
+            <td align="right">16</td>
+            <td align="right">2</td>
+            <td align="right">0</td>
+            <td align="right">1</td>
+            <td align="right">0</td>
+            <td align="right">1</td>
+            <td align="right">2</td>
+            <td align="right">210&nbsp;b</td>
+            <td align="right">8&nbsp;kb</td>
+            <td align="right">24&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Manufacturing failure reasons lookup table.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_ProductionTransactionHistory.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">TransactionHistory</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">9</td>
+            <td align="right">113,443</td>
+            <td align="right">3</td>
+            <td align="right">0</td>
+            <td align="right">3</td>
+            <td align="right">1</td>
+            <td align="right">0</td>
+            <td align="right">9</td>
+            <td align="right">48&nbsp;b</td>
+            <td align="right">6,304&nbsp;kb</td>
+            <td align="right">3,192&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Record of each purchase order, sales order, or work order transaction year to date.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_ProductionTransactionHistoryArchive.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">TransactionHistoryArchive</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">9</td>
+            <td align="right">89,253</td>
+            <td align="right">3</td>
+            <td align="right">0</td>
+            <td align="right">2</td>
+            <td align="right">0</td>
+            <td align="right">0</td>
+            <td align="right">4</td>
+            <td align="right">48&nbsp;b</td>
+            <td align="right">4,960&nbsp;kb</td>
+            <td align="right">2,568&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Transactions for previous years.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_ProductionUnitMeasure.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">UnitMeasure</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">3</td>
+            <td align="right">38</td>
+            <td align="right">2</td>
+            <td align="right">0</td>
+            <td align="right">1</td>
+            <td align="right">0</td>
+            <td align="right">4</td>
+            <td align="right">2</td>
+            <td align="right">220&nbsp;b</td>
+            <td align="right">8&nbsp;kb</td>
+            <td align="right">24&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Unit of measure lookup table.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_ProductionWorkOrder.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">WorkOrder</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">10</td>
+            <td align="right">72,591</td>
+            <td align="right">3</td>
+            <td align="right">2</td>
+            <td align="right">6</td>
+            <td align="right">2</td>
+            <td align="right">1</td>
+            <td align="right">8</td>
+            <td align="right">52&nbsp;b</td>
+            <td align="right">4,192&nbsp;kb</td>
+            <td align="right">1,832&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Manufacturing work orders.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_ProductionWorkOrderRouting.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">WorkOrderRouting</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">12</td>
+            <td align="right">67,131</td>
+            <td align="right">2</td>
+            <td align="right">0</td>
+            <td align="right">10</td>
+            <td align="right">2</td>
+            <td align="right">0</td>
+            <td align="right">7</td>
+            <td align="right">73&nbsp;b</td>
+            <td align="right">5,552&nbsp;kb</td>
+            <td align="right">1,040&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Work order details.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_PurchasingProductVendor.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">ProductVendor</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">11</td>
+            <td align="right">460</td>
+            <td align="right">3</td>
+            <td align="right">0</td>
+            <td align="right">11</td>
+            <td align="right">3</td>
+            <td align="right">0</td>
+            <td align="right">9</td>
+            <td align="right">68&nbsp;b</td>
+            <td align="right">40&nbsp;kb</td>
+            <td align="right">48&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Cross-reference table mapping vendors with the products they supply.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_PurchasingPurchaseOrderDetail.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">PurchaseOrderDetail</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">11</td>
+            <td align="right">8,845</td>
+            <td align="right">2</td>
+            <td align="right">2</td>
+            <td align="right">8</td>
+            <td align="right">2</td>
+            <td align="right">0</td>
+            <td align="right">8</td>
+            <td align="right">61&nbsp;b</td>
+            <td align="right">512&nbsp;kb</td>
+            <td align="right">168&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Individual products associated with a specific purchase order. See PurchaseOrderHeader.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_PurchasingPurchaseOrderHeader.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">PurchaseOrderHeader</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">13</td>
+            <td align="right">4,012</td>
+            <td align="right">3</td>
+            <td align="right">1</td>
+            <td align="right">9</td>
+            <td align="right">3</td>
+            <td align="right">1</td>
+            <td align="right">11</td>
+            <td align="right">74&nbsp;b</td>
+            <td align="right">336&nbsp;kb</td>
+            <td align="right">144&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>General purchase order information. See PurchaseOrderDetail.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_PurchasingShipMethod.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">ShipMethod</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">6</td>
+            <td align="right">5</td>
+            <td align="right">3</td>
+            <td align="right">0</td>
+            <td align="right">3</td>
+            <td align="right">0</td>
+            <td align="right">2</td>
+            <td align="right">5</td>
+            <td align="right">244&nbsp;b</td>
+            <td align="right">8&nbsp;kb</td>
+            <td align="right">40&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Shipping company lookup table.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_PurchasingVendor.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">Vendor</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">8</td>
+            <td align="right">104</td>
+            <td align="right">2</td>
+            <td align="right">1</td>
+            <td align="right">2</td>
+            <td align="right">0</td>
+            <td align="right">4</td>
+            <td align="right">5</td>
+            <td align="right">4,369&nbsp;b</td>
+            <td align="right">16&nbsp;kb</td>
+            <td align="right">32&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Companies from whom Adventure Works Cycles purchases parts or other goods.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_PurchasingVendorAddress.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">VendorAddress</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">4</td>
+            <td align="right">104</td>
+            <td align="right">2</td>
+            <td align="right">0</td>
+            <td align="right">5</td>
+            <td align="right">3</td>
+            <td align="right">0</td>
+            <td align="right">3</td>
+            <td align="right">20&nbsp;b</td>
+            <td align="right">8&nbsp;kb</td>
+            <td align="right">24&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Cross-reference mapping vendors and addresses.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_PurchasingVendorContact.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">VendorContact</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">4</td>
+            <td align="right">156</td>
+            <td align="right">3</td>
+            <td align="right">0</td>
+            <td align="right">5</td>
+            <td align="right">3</td>
+            <td align="right">0</td>
+            <td align="right">5</td>
+            <td align="right">20&nbsp;b</td>
+            <td align="right">8&nbsp;kb</td>
+            <td align="right">40&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Cross-reference table mapping vendors and their employees.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_SalesContactCreditCard.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">ContactCreditCard</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">3</td>
+            <td align="right">19,118</td>
+            <td align="right">1</td>
+            <td align="right">0</td>
+            <td align="right">4</td>
+            <td align="right">2</td>
+            <td align="right">0</td>
+            <td align="right">1</td>
+            <td align="right">16&nbsp;b</td>
+            <td align="right">480&nbsp;kb</td>
+            <td align="right">16&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Cross-reference table mapping customers in the Contact table to their credit card information in the CreditCard table. &nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_SalesCountryRegionCurrency.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">CountryRegionCurrency</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">3</td>
+            <td align="right">109</td>
+            <td align="right">2</td>
+            <td align="right">0</td>
+            <td align="right">4</td>
+            <td align="right">2</td>
+            <td align="right">0</td>
+            <td align="right">2</td>
+            <td align="right">32&nbsp;b</td>
+            <td align="right">8&nbsp;kb</td>
+            <td align="right">24&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Cross-reference table mapping ISO currency codes to a country or region.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_SalesCreditCard.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">CreditCard</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">6</td>
+            <td align="right">19,118</td>
+            <td align="right">2</td>
+            <td align="right">0</td>
+            <td align="right">1</td>
+            <td align="right">0</td>
+            <td align="right">2</td>
+            <td align="right">2</td>
+            <td align="right">315&nbsp;b</td>
+            <td align="right">1,496&nbsp;kb</td>
+            <td align="right">776&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Customer credit card information.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_SalesCurrency.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">Currency</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">3</td>
+            <td align="right">105</td>
+            <td align="right">2</td>
+            <td align="right">0</td>
+            <td align="right">1</td>
+            <td align="right">0</td>
+            <td align="right">3</td>
+            <td align="right">2</td>
+            <td align="right">220&nbsp;b</td>
+            <td align="right">8&nbsp;kb</td>
+            <td align="right">24&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Lookup table containing standard ISO currencies.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_SalesCurrencyRate.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">CurrencyRate</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">7</td>
+            <td align="right">13,532</td>
+            <td align="right">2</td>
+            <td align="right">0</td>
+            <td align="right">3</td>
+            <td align="right">2</td>
+            <td align="right">1</td>
+            <td align="right">2</td>
+            <td align="right">60&nbsp;b</td>
+            <td align="right">768&nbsp;kb</td>
+            <td align="right">400&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Currency exchange rates.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_SalesCustomer.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">Customer</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">6</td>
+            <td align="right">19,185</td>
+            <td align="right">4</td>
+            <td align="right">0</td>
+            <td align="right">3</td>
+            <td align="right">1</td>
+            <td align="right">4</td>
+            <td align="right">7</td>
+            <td align="right">46&nbsp;b</td>
+            <td align="right">824&nbsp;kb</td>
+            <td align="right">1,176&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Current customer information. Also see the Individual and Store tables.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_SalesCustomerAddress.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">CustomerAddress</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">5</td>
+            <td align="right">19,220</td>
+            <td align="right">2</td>
+            <td align="right">0</td>
+            <td align="right">5</td>
+            <td align="right">3</td>
+            <td align="right">0</td>
+            <td align="right">4</td>
+            <td align="right">36&nbsp;b</td>
+            <td align="right">864&nbsp;kb</td>
+            <td align="right">552&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Cross-reference table mapping customers to their address(es).&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_SalesIndividual.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">Individual</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">4</td>
+            <td align="right">18,484</td>
+            <td align="right">5</td>
+            <td align="right">1</td>
+            <td align="right">3</td>
+            <td align="right">2</td>
+            <td align="right">0</td>
+            <td align="right">11</td>
+            <td align="right">2,147,483,662&nbsp;b</td>
+            <td align="right">24,680&nbsp;kb</td>
+            <td align="right">144&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Demographic data about customers that purchase Adventure Works products online.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_SalesSalesOrderDetail.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">SalesOrderDetail</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">11</td>
+            <td align="right">121,317</td>
+            <td align="right">3</td>
+            <td align="right">1</td>
+            <td align="right">8</td>
+            <td align="right">3</td>
+            <td align="right">0</td>
+            <td align="right">7</td>
+            <td align="right">175&nbsp;b</td>
+            <td align="right">9,880&nbsp;kb</td>
+            <td align="right">5,312&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Individual products associated with a specific sales order. See SalesOrderHeader.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_SalesSalesOrderHeader.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">SalesOrderHeader</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">27</td>
+            <td align="right">31,465</td>
+            <td align="right">5</td>
+            <td align="right">1</td>
+            <td align="right">16</td>
+            <td align="right">9</td>
+            <td align="right">2</td>
+            <td align="right">14</td>
+            <td align="right">909&nbsp;b</td>
+            <td align="right">5,616&nbsp;kb</td>
+            <td align="right">2,432&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>General sales order information.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_SalesSalesOrderHeaderSalesReason.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">SalesOrderHeaderSalesReason</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">3</td>
+            <td align="right">27,647</td>
+            <td align="right">1</td>
+            <td align="right">0</td>
+            <td align="right">4</td>
+            <td align="right">2</td>
+            <td align="right">0</td>
+            <td align="right">1</td>
+            <td align="right">16&nbsp;b</td>
+            <td align="right">688&nbsp;kb</td>
+            <td align="right">16&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Cross-reference table mapping sales orders to sales reason codes.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_SalesSalesPerson.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">SalesPerson</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">9</td>
+            <td align="right">17</td>
+            <td align="right">2</td>
+            <td align="right">0</td>
+            <td align="right">8</td>
+            <td align="right">2</td>
+            <td align="right">4</td>
+            <td align="right">10</td>
+            <td align="right">68&nbsp;b</td>
+            <td align="right">8&nbsp;kb</td>
+            <td align="right">24&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Sales representative current information.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_SalesSalesPersonQuotaHistory.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">SalesPersonQuotaHistory</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">5</td>
+            <td align="right">163</td>
+            <td align="right">2</td>
+            <td align="right">0</td>
+            <td align="right">4</td>
+            <td align="right">1</td>
+            <td align="right">0</td>
+            <td align="right">3</td>
+            <td align="right">44&nbsp;b</td>
+            <td align="right">16&nbsp;kb</td>
+            <td align="right">32&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Sales performance tracking.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_SalesSalesReason.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">SalesReason</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">4</td>
+            <td align="right">10</td>
+            <td align="right">1</td>
+            <td align="right">0</td>
+            <td align="right">1</td>
+            <td align="right">0</td>
+            <td align="right">1</td>
+            <td align="right">1</td>
+            <td align="right">412&nbsp;b</td>
+            <td align="right">8&nbsp;kb</td>
+            <td align="right">8&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Lookup table of customer purchase reasons.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_SalesSalesTaxRate.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">SalesTaxRate</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">7</td>
+            <td align="right">29</td>
+            <td align="right">3</td>
+            <td align="right">0</td>
+            <td align="right">3</td>
+            <td align="right">1</td>
+            <td align="right">0</td>
+            <td align="right">4</td>
+            <td align="right">237&nbsp;b</td>
+            <td align="right">8&nbsp;kb</td>
+            <td align="right">40&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Tax rate lookup table.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_SalesSalesTerritory.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">SalesTerritory</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">10</td>
+            <td align="right">10</td>
+            <td align="right">3</td>
+            <td align="right">0</td>
+            <td align="right">5</td>
+            <td align="right">0</td>
+            <td align="right">5</td>
+            <td align="right">10</td>
+            <td align="right">472&nbsp;b</td>
+            <td align="right">8&nbsp;kb</td>
+            <td align="right">40&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Sales territory lookup table.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_SalesSalesTerritoryHistory.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">SalesTerritoryHistory</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">6</td>
+            <td align="right">17</td>
+            <td align="right">2</td>
+            <td align="right">0</td>
+            <td align="right">6</td>
+            <td align="right">2</td>
+            <td align="right">0</td>
+            <td align="right">3</td>
+            <td align="right">48&nbsp;b</td>
+            <td align="right">8&nbsp;kb</td>
+            <td align="right">24&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Sales representative transfers to other sales territories.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_SalesShoppingCartItem.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">ShoppingCartItem</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">6</td>
+            <td align="right">3</td>
+            <td align="right">2</td>
+            <td align="right">0</td>
+            <td align="right">3</td>
+            <td align="right">1</td>
+            <td align="right">0</td>
+            <td align="right">3</td>
+            <td align="right">228&nbsp;b</td>
+            <td align="right">8&nbsp;kb</td>
+            <td align="right">24&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Contains online customer orders until the order is submitted or cancelled.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_SalesSpecialOffer.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">SpecialOffer</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">11</td>
+            <td align="right">16</td>
+            <td align="right">2</td>
+            <td align="right">0</td>
+            <td align="right">5</td>
+            <td align="right">0</td>
+            <td align="right">1</td>
+            <td align="right">6</td>
+            <td align="right">1,476&nbsp;b</td>
+            <td align="right">8&nbsp;kb</td>
+            <td align="right">24&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Sale discounts lookup table.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_SalesSpecialOfferProduct.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">SpecialOfferProduct</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">4</td>
+            <td align="right">538</td>
+            <td align="right">3</td>
+            <td align="right">0</td>
+            <td align="right">4</td>
+            <td align="right">2</td>
+            <td align="right">2</td>
+            <td align="right">3</td>
+            <td align="right">32&nbsp;b</td>
+            <td align="right">24&nbsp;kb</td>
+            <td align="right">64&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Cross-reference table mapping products to special offer discounts.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_SalesStore.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">Store</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">6</td>
+            <td align="right">701</td>
+            <td align="right">4</td>
+            <td align="right">1</td>
+            <td align="right">3</td>
+            <td align="right">2</td>
+            <td align="right">1</td>
+            <td align="right">7</td>
+            <td align="right">2,147,483,878&nbsp;b</td>
+            <td align="right">808&nbsp;kb</td>
+            <td align="right">80&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Customers (resellers) of Adventure Works products.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="table_SalesStoreContact.htm" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">StoreContact</a>
+            </td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td>Mar 19 2009  9:08PM</td>
+            <td align="right">5</td>
+            <td align="right">753</td>
+            <td align="right">4</td>
+            <td align="right">0</td>
+            <td align="right">5</td>
+            <td align="right">3</td>
+            <td align="right">0</td>
+            <td align="right">6</td>
+            <td align="right">36&nbsp;b</td>
+            <td align="right">40&nbsp;kb</td>
+            <td align="right">120&nbsp;kb</td>
+            <td>
+              <span class="desc">
+                <span>Cross-reference table mapping stores and their employees.&nbsp;
+  </span>
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+	  </body>
+	  </html>

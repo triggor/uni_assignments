@@ -1,0 +1,44 @@
+body {
+	color: #fff;
+	font-family: Arial, sans-serif;
+	display: flex;
+	flex-direction: column;
+	font-size: 80%;
+	height: 100vh;
+}
+
+#nawi, article, aside, footer { padding: 20px; }
+
+main {
+	display: flex;
+	height: 100%;
+}
+header {
+	display: flex;
+	flex-direction: row;
+}
+#logo{
+	background-color: red;
+	padding: 20px;
+	width: 118px;
+}
+#heada{
+	background-color: black;
+	padding: 20px;
+	flex: auto;
+}
+
+#nawi {
+	background-color: green;
+}
+article {
+	background-color: purple;
+	flex: 2 2 12em;
+}
+aside {
+	display: none;
+	background-color: blue;
+}
+footer {
+	background-color: orange;
+}
