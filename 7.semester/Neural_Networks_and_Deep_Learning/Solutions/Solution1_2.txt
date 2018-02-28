@@ -1,0 +1,91 @@
+# Zadanie 2.g:
+
+def ismagic(A):
+    dimensions = int(np.sqrt(A.size))
+    diag1 = np.sum(np.diag(A))
+    diag2 = np.sum(np.diag(np.fliplr(A)))
+    row_sum = A.sum(axis=0)
+    col_sum = A.sum(axis=1)
+    if(any(col_sum-row_sum)!=0 or any(row_sum-diag1)!=0 or (diag1 != diag2)):
+        return False
+    return True
+###################################################################################
+
+#Zadanie 3 v.1:
+
+def kNearest(trainingSet, unknownSet, targetSet, targetArray, k):
+    petal_length = trainingSet[:, 2]
+    petal_width = trainingSet[:, 3]
+    train = np.hstack((np.reshape(petal_length, (-1, 1)), np.reshape(petal_width, (-1, 1))))
+    result = []
+
+    for u_elem in unknownSet:
+        train -= u_elem #subtact the coordinates of the unknown element from each training element (through broadcasting)
+        train2 = np.multiply(train,train) #get squares of each coordinate's difference
+        distances = np.sqrt(train2[:,0]+train2[:,1]) #distance == sqrt of summed coordinate's difference squared 
+        closest = np.argsort(distances)[:k] #get k closest elements' indexes
+
+        targets = []
+        for i in closest:
+            targets.append(targetSet[targetArray[i]])#find corresponding targets to found indexes in the training set
+        result.append(targets)
+                
+    return result
+
+#Przykładowe dane:
+iris = datasets.load_iris()
+unknown = np.array([
+    [1.5, 0.3],
+    [4.5, 1.2],
+    [5.5, 2.3],
+    [5.1, 1.7]
+])
+
+kNearest(iris.data, unknown, iris.target_names, iris.target, 50)
+###################################################################################
+
+#Zadanie 3 v.2 (do Zadania 4):
+def kNearest(trainingSet, unknownSet, targetSet, targetArray, k):
+    petal_length = trainingSet[:, 2]
+    petal_width = trainingSet[:, 3]
+    unknown_length = unknownSet[:, 2]
+    unknown_width = unknownSet[:, 3]
+    train = np.hstack((np.reshape(petal_length, (-1, 1)), np.reshape(petal_width, (-1, 1))))
+    unknown = np.hstack((np.reshape(unknown_length, (-1, 1)), np.reshape(unknown_width, (-1, 1))))
+    result = []
+    
+    for u_elem in unknown:
+        train -= u_elem #subtact the coordinates of the unknown element from each training element (through broadcasting)
+        train2 = np.multiply(train,train) #get squares of each coordinate's difference
+        distances = np.sqrt(train2[:,0]+train2[:,1]) #distance == sqrt of summed coordinate's difference squared 
+        closest = np.argsort(distances)[:k] #get k closest elements' indexes
+
+        for i in closest:
+            result.append(targetArray[i])#find corresponding targets to found indexes in the training set
+                
+    return result
+###################################################################################
+
+#Zadanie 4:
+
+from sklearn import datasets
+import matplotlib.pyplot as plt
+
+iris = datasets.load_iris()
+
+errors = []
+for k in range(1,20, 2):
+    suma = 0
+    for i in range(500):
+        
+        perm = np.random.permutation(np.linspace(0, 149, 150, endpoint=True, dtype=np.int))
+        data = iris.data[perm]
+        labels = iris.target[perm]
+        
+        result = np.equal(kNearest(data[:100], data[100:], iris.target_names, labels, k), labels[100:])
+        suma += np.count_nonzero(result == False)
+    
+    errors.append(suma/500)
+print(errors)
+
+

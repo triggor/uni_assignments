@@ -1,0 +1,137 @@
+% Author: Igor Tryhub, 275235
+% Lista1 (Matlab)
+
+
+%Zadanie 0.
+a = [1:100];
+b = [1:2:100];
+c = [-pi:0.01*pi:pi];
+d = c([1:100, 102:201]);
+e = sin([1:100]).*(sin([1:100])> 0);
+A = reshape([1:100], [10,10]);
+B = diag([1:100])+diag([99:-1:1],1)+diag([99:-1:1],-1);
+C = triu(ones(100,100));
+D = [cumsum(1:1:100); cumprod(1:1:100)];
+x = 1:100;
+y = 1:100;
+[X,Y] = meshgrid(x,y);
+E = (X./Y).*(rem(X,Y)==0);
+
+
+
+%Zadanie 1.
+hist([2*rand(10000,1)-1],100);
+hist([2*rand(100000,1)-1],100);
+
+hist([3.*randn(10000,1) + 5],100);
+hist([3.*randn(100000,1) + 5],100);
+
+scatter([sqrt(5).*randn(10000,1) + 2], [randn(10000,1) + 3], 2, 'b', 'filled');
+scatter([sqrt(5).*randn(100000,1) + 2], [randn(100000,1) + 3], 2, 'b', 'filled');
+
+m = horzcat([sqrt(5).*randn(10000,1) + 2],[randn(10000,1) + 3]);
+ppb = sum(m(:,1)-m(:,2)<0)/10000
+
+
+
+%Zadanie 3.
+d=100;
+x=rand(d,1);
+y=rand(d,1);
+w=rand(d,1);
+sqrt(transpose(x)*x)
+transpose(x)*w/sum(w)
+sqrt(transpose(x-y)*(x-y))
+transpose(x)*y
+
+N=1000;
+X = rand(d, N);
+transpose(arrayfun(@(x) sqrt(transpose(X(:,x))*X(:,x)),1:N))
+transpose(arrayfun(@(x) transpose(X(:,x))*w/sum(w), 1:N))
+transpose(arrayfun(@(x) sqrt(transpose(X(:,x)-y)*(X(:,x)-y)), 1:N))
+transpose(arrayfun(@(x) sqrt(transpose(X(:,x))*y), 1:N))
+
+
+
+%Zadanie 4.
+%
+% function [ D_matrix ] = euclid_dist( X_matrix, Y_matrix )
+%     X = size(X_matrix);
+%     X_len = X(2);
+%     Y = size(Y_matrix);
+%     Y_len = Y(2);
+%     D_matrix = zeros(X_len, Y_len);
+%     for i = 1 : X_len
+%         for j = 1 : Y_len
+%             D_matrix(i,j) = sqrt(transpose(X_matrix(:,i)- Y_matrix(:,j))*(X_matrix(:,i)- Y_matrix(:,j)));
+%         end;
+%     end;
+% end
+
+d = 100;
+N = 1000;
+M = 1000;
+X = rand(d, N);
+Y = rand(d, M);
+tic
+euclid_dist(X,Y); %Elapsed time is 1.243124 seconds.
+toc
+
+
+N = 10000;
+X = rand(d, N);
+tic
+euclid_dist(X,Y); %Elapsed time is 12.144539 seconds.
+toc
+
+
+
+
+%Zadanie 6.
+%Stick to the choice ppb:
+won = 0;
+for i = 1 : 10000
+	set = zeros(1,3);
+	car = randi([1 3]);
+	set(car) = 1;
+	choice = randi([1 3]);
+	set(choice) = set(choice) + 2;
+	open = randi([1 3]);
+	while set(open) ~= 0
+	    open = randi([1 3]);
+	end;
+	set(open) = -1;
+	won = won + ismember(3, set);
+end;
+ppb = won/10000 %0.3342
+
+%Change your mind ppb:
+won = 0;
+for i = 1 : 10000
+	set = zeros(1,3);
+	car = randi([1 3]);
+	set(car) = 1;
+	choice = randi([1 3]);
+	set(choice) = set(choice) + 2;
+	open = randi([1 3]);
+	while set(open) ~= 0
+	    open = randi([1 3]);
+	end;
+	set(open) = -1;
+
+	free = -1;
+
+	for i = 1 : 3
+		if i ~= choice
+			if i ~= open
+				free = i;
+			end;
+		end;
+	end;
+	set(free) = set(free) + 2;
+	set(choice) = set(choice) - 2;
+	won = won + ismember(3, set);
+end;
+ppb = won/10000 %ppb=0.6677
+
+

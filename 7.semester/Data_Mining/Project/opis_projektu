@@ -1,0 +1,44 @@
+Temat projektu: “System rekomendujący filmów na podstawie bazy MovieLens”
+
+Plan działań:
+1) Będziemy stosować metodę hybrydową łaczącą collaborative filtering i content-based model.
+2) Na początku mamy zamiar podzielić bazę zarówno użytkowników jak i filmów na odrębne grupy używając jednej z metod grupowania danych (np. DB-scan). Elementy które nie wpadają jawnie do głównych grup chcemy traktować szczególnie.
+3) Collaborative filtering:
+  a) user-user filtering;
+  b) item-item filtering.
+4) Content-based model.
+5) Łączenie danych w model hybrydowy dla sporządzenia listy rekomendacji.
+6) Dla walidacji będziemy korzystać z Cross-validation. W celu veryfikacji poprawności działania naszego systemu rekomendującego tworzymy kilka(-dziesiąt) nowych użytkowników o różnych profilach i 
+różnej aktywności i patrzymy na ile sensowne są nasze rekomendacje.
+
+
+
+Content based recommendation:
+
+Profil każdego z filmów zostanie ustalony na podstawie metadanych (rok wydania, gatunek), oraz związanych z nim tagów.
+Podczas gdy rok wydania oraz gatunek określone są bardzo dokładnie i zawierają się w małym zamkniętym zbiorze,
+to tagi zostały przesłane przez użytkowników strony MovieLens, przez co są znacznie mniej przewidywalne.
+Różne tagi o tym samym znaczeniu mogą być napisane małymi/wielkimi literami,
+być napisane jednym słowem lub mogą zawierać się w całym zdaniu, dlatego opisane zostaną za pomocą miary TF-IDF.
+Miara dla roku wydania oraz gatunku może okazać się ważniejsza niż miara poszczególnych tagów,
+dlatego być może będzie musiała być obliczana inną metodą.
+
+Profil każdego użytkownika zostanie obliczony na podstawie średniej ważonej profili ocenionych przez niego filmów.
+Wagi będą określone jako różnica oceny użytkownika i średniej oceny danego filmu przez wszystkich użytkowników. 
+
+
+User-user collaborative filtering:
+
+Dla każdego użytkownika będziemy wyznaczać zbiór użytkowników do niego podobnych, a następnie estymować oceny nieocenionych
+jeszcze filmów na podstawie ocen tych filmów wystawionych przez użytkowników podobnych. Jako miarę podobieństwa użytkowników 
+będziemy stosować współczynnik Pearsona ze średnią ważoną z wagami proporcjonalnymi do odległości między użytkownikami. W ten
+sposób nasz system będzie korzystał z profilu konkretnego użytkownika i udzielał rekomendacji całkowicie na podstawie 
+preferencji i preferencji tego użytkownika.
+
+Item-item collaborative filtering:
+
+Dla każdego filmu będziemy wyznaczać zbiór filmów do niego podobnych na podstawie ocen użytkowników, a następnie proponować 
+filmy podobne o najwyższych ocenach prognozowanych. Jako miarę podobieństwa fimów będziemy stosować miarę kosinusów ze średnią 
+ważoną z wagami proporcjonalnymi do odległości między filmami. Dana metoda jest dość stabilna sama w sobie w porównaniu do 
+filtrowania user-user, ponieważ przeciętny film ma o wiele więcej ocen niż wystawia przeciętny użytkownik. 
+
