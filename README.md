@@ -55,8 +55,5 @@ Here are uploaded my university assignments (mostly in Polish) along with my pro
  # [8. semester](https://github.com/triggor/uni_assignments/tree/master/8.semester) (current):
  - [Artificial_Intelligence](https://github.com/triggor/uni_assignments/tree/master/8.semester/Artificial_Intelligence)
  - [Evolutionary_Algorithms](https://github.com/triggor/uni_assignments/tree/master/8.semester/Evolutionary_Algorithms)
- - [Database_Applications_Design](https://github.com/triggor/uni_assignments/tree/master/8.semester/Database_Applications_Design)
- - [Object_Oriented_Software_Design](https://github.com/triggor/uni_assignments/tree/master/8.semester/Object_Oriented_Software_Design)
- - [Graph_Databases](https://github.com/triggor/uni_assignments/tree/master/8.semester/Graph_Databases)
- - [Distributed_Algorithms](https://github.com/triggor/uni_assignments/tree/master/8.semester/Distributed_Algorithms)
+ - [Statistical_Inference](https://github.com/triggor/uni_assignments/tree/master/8.semester/Statistical_Inference)
  - [BEng_Thesis](https://github.com/triggor/uni_assignments/tree/master/8.semester/BEng_Thesis)
