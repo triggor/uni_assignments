@@ -52,7 +52,7 @@ Here are uploaded my university assignments (mostly in Polish) along with my pro
  - [Economics_of_European_integration](https://github.com/triggor/uni_assignments/tree/master/7.semester/Economics_of_European_integration)
  - [German_B2II](https://github.com/triggor/uni_assignments/tree/master/7.semester/German_B2II)
  
- # [8. semester](https://github.com/triggor/uni_assignments/tree/master/8.semester) (current):
+ # [8. semester](https://github.com/triggor/uni_assignments/tree/master/8.semester):
  - [Artificial_Intelligence](https://github.com/triggor/uni_assignments/tree/master/8.semester/Artificial_Intelligence)
  - [Evolutionary_Algorithms](https://github.com/triggor/uni_assignments/tree/master/8.semester/Evolutionary_Algorithms)
  - [Statistical_Inference](https://github.com/triggor/uni_assignments/tree/master/8.semester/Statistical_Inference)
